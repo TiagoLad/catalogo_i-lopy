@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Catálogo online I-llopy: moda íntima com conforto, beleza e delicadeza.">
+  <meta name="theme-color" content="#d93379">
+  <meta property="og:title" content="Catálogo I-llopy | Moda íntima">
+  <meta property="og:description" content="Conheça a coleção I-llopy e compre com facilidade pelo WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/logo_principal.jpg">
+  <title>Catálogo I-llopy | Moda íntima com conforto e delicadeza</title>
+  <link rel="icon" href="images/logo_principal.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#catalogo">Ir para o catálogo</a>
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="index.html" aria-label="I-llopy — página inicial">
+        <span class="logo-frame"><img src="images/logo_principal.jpg" alt="Logo da loja I-llopy" width="64" height="64" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="logo-fallback" hidden aria-hidden="true">I</span></span>
+        <span class="brand-name">I-llopy</span>
+      </a>
+      <nav class="header-actions" aria-label="Redes sociais">
+        <a class="text-link" href="https://instagram.com/SEUINSTAGRAMAQUI" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a class="button button-primary button-small js-general-whatsapp" href="#">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-content"><p class="eyebrow">Conforto em cada detalhe</p><h1 id="hero-title">Catálogo I-llopy</h1><p>Moda íntima com conforto, beleza e delicadeza.</p><a class="button button-light" href="#catalogo">Ver coleção</a></div>
+    </section>
+    <section class="catalog-section" id="catalogo" aria-labelledby="catalog-title">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">Nossa coleção</p><h2 id="catalog-title">Encontre sua peça favorita</h2></div>
+          <label class="search-box"><span class="sr-only">Buscar produto pelo nome</span><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="m21 21-4.35-4.35m2.35-5.15A7.5 7.5 0 1 1 4 11.5a7.5 7.5 0 0 1 15 0Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><input id="search-input" type="search" placeholder="Buscar por nome..." autocomplete="off"></label>
+        </div>
+        <div class="filters" id="category-filters" aria-label="Filtrar por categoria">
+          <button class="filter-button active" type="button" data-category="Todos" aria-pressed="true">Todos</button>
+          <button class="filter-button" type="button" data-category="Baby Doll" aria-pressed="false">Baby Doll</button>
+          <button class="filter-button" type="button" data-category="Conjuntos" aria-pressed="false">Conjuntos</button>
+          <button class="filter-button" type="button" data-category="Calcinhas" aria-pressed="false">Calcinhas</button>
+          <button class="filter-button" type="button" data-category="Sutiãs" aria-pressed="false">Sutiãs</button>
+          <button class="filter-button" type="button" data-category="Pijamas" aria-pressed="false">Pijamas</button>
+          <button class="filter-button" type="button" data-category="Promoções" aria-pressed="false">Promoções</button>
+        </div>
+        <p class="results-count" id="results-count" aria-live="polite"></p>
+        <div class="status-message" id="catalog-status" role="status"><span class="loader" aria-hidden="true"></span><p>Carregando produtos...</p></div>
+        <div class="product-grid" id="product-grid"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid"><div><strong>I-llopy</strong><p>Moda íntima com beleza e conforto.</p></div><div class="footer-links"><a href="https://instagram.com/SEUINSTAGRAMAQUI" target="_blank" rel="noopener noreferrer">Instagram</a><a class="js-general-whatsapp" href="#">WhatsApp</a></div><p class="footer-notice">As cores e disponibilidade dos produtos podem variar. Consulte pelo WhatsApp.</p></div>
+    <p class="copyright">© <span id="current-year"></span> I-llopy. Todos os direitos reservados.</p>
+  </footer>
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
