@@ -3,7 +3,7 @@
     "id": 1,
     "nome": "Baby Doll Branco",
     "categoria": "Baby Doll",
-    "preco": "R$ 60,00",
+    "preco": "R$ 49,00",
     "descricao": "Baby doll branco tamanho P, leve e delicado.",
     "imagem": "images/produtos/Baby_Doll-Branco_P/1.jpeg",
     "imagens": [
@@ -20,7 +20,7 @@
     "id": 2,
     "nome": "Baby Doll Marsala",
     "categoria": "Baby Doll",
-    "preco": "R$ 60,00",
+    "preco": "R$ 49,00",
     "descricao": "Baby doll marsala tamanho M, com caimento confortável.",
     "imagem": "images/produtos/Baby_Doll_Marsala_M/1.jpg",
     "imagens": [
@@ -36,7 +36,7 @@
     "id": 3,
     "nome": "Baby Doll Preto e Vermelho",
     "categoria": "Baby Doll",
-    "preco": "R$ 60,00",
+    "preco": "R$ 49,00",
     "descricao": "Baby doll preto e vermelho com renda, tamanho G.",
     "imagem": "images/produtos/Baby_Doll_Preto_Vermelho_Renda_G/1.jpg",
     "imagens": [
@@ -50,7 +50,7 @@
     "id": 4,
     "nome": "Baby Doll Verde Militar",
     "categoria": "Baby Doll",
-    "preco": "R$ 60,00",
+    "preco": "R$ 49,00",
     "descricao": "Baby doll verde militar tamanho G, moderno e confortável.",
     "imagem": "images/produtos/Baby_Doll_Verde_Militar_G/1.jpg",
     "imagens": [
@@ -94,7 +94,7 @@
     "id": 7,
     "nome": "Camisola Vermelha com Renda Preta",
     "categoria": "Camisolas",
-    "preco": "R$ 60,00",
+    "preco": "R$ 50,00",
     "descricao": "Camisola vermelha com renda preta, disponível nos tamanhos M e G.",
     "imagem": "images/produtos/Camisola_Vermelha_Renda_M_G/1.jpg",
     "imagens": [
@@ -248,7 +248,7 @@
     "id": 17,
     "nome": "Baby Doll de Malha Canelada com Detalhes em Renda",
     "categoria": "Baby Doll",
-    "preco": "R$ 60,00",
+    "preco": "R$ 39,00",
     "descricao": "Baby doll de malha canelada com detalhes em renda, tamanho G.",
     "imagem": "images/produtos/Baby_Doll_Malha_Canelada_Com_ detalhes_ em_renda_G/1.jpg",
     "imagens": [
@@ -263,7 +263,7 @@
     "id": 18,
     "nome": "Pijama de Alça",
     "categoria": "Pijamas",
-    "preco": "R$ 60,00",
+    "preco": "R$ 45,00",
     "descricao": "Pijama de alça tamanho M, leve e confortável.",
     "imagem": "images/produtos/Pijama_Alça_M/1.png",
     "imagens": [
@@ -291,7 +291,7 @@
     "id": 20,
     "nome": "Pijama Americano Cinza",
     "categoria": "Pijamas",
-    "preco": "R$ 60,00",
+    "preco": "R$ 45,00",
     "descricao": "Pijama americano cinza, disponível nos tamanhos G e GG.",
     "imagem": "images/produtos/Pijama_Americano_Cinza_G_GG/1.png",
     "imagens": [
@@ -317,23 +317,23 @@
   },
   {
     "id": 22,
-    "nome": "Pijama Americano VL",
+    "nome": "Pijama Americano LV",
     "categoria": "Pijamas",
     "preco": "R$ 60,00",
-    "descricao": "Pijama americano VL tamanho M, moderno e confortável.",
+    "descricao": "Pijama americano LV tamanho M, moderno e confortável.",
     "imagem": "images/produtos/Pijama_Americano_VL_M/1.png",
     "imagens": [
       "images/produtos/Pijama_Americano_VL_M/1.png"
     ],
     "destaque": false,
     "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Pijama Americano VL tamanho M."
+    "whatsapp": "Olá, tenho interesse no Pijama Americano LV tamanho M."
   },
   {
     "id": 23,
     "nome": "Pijama Americano Verde",
     "categoria": "Pijamas",
-    "preco": "R$ 60,00",
+    "preco": "R$ 45,00",
     "descricao": "Pijama americano verde tamanho M, leve e confortável.",
     "imagem": "images/produtos/Pijama_Americano_Verde_M/1.png",
     "imagens": [
@@ -347,7 +347,7 @@
     "id": 24,
     "nome": "Pijama Branco com Bolso",
     "categoria": "Pijamas",
-    "preco": "R$ 60,00",
+    "preco": "R$ 35,00",
     "descricao": "Pijama branco com bolso, tamanho G.",
     "imagem": "images/produtos/Pijama_Branco_Com_Bolso_G/1.png",
     "imagens": [
@@ -361,7 +361,7 @@
     "id": 25,
     "nome": "Pijama com Estampa",
     "categoria": "Pijamas",
-    "preco": "R$ 60,00",
+    "preco": "R$ 35,00",
     "descricao": "Pijama com estampa, tamanho G.",
     "imagem": "images/produtos/Pijama_Com_Estampa_G/1.png",
     "imagens": [
@@ -375,7 +375,7 @@
     "id": 26,
     "nome": "Pijama Florido",
     "categoria": "Pijamas",
-    "preco": "R$ 60,00",
+    "preco": "R$ 45,00",
     "descricao": "Pijama florido tamanho G, leve e delicado.",
     "imagem": "images/produtos/Pijama_Florido_G/1.png",
     "imagens": [
@@ -387,23 +387,23 @@
   },
   {
     "id": 27,
-    "nome": "Pijama I Love Rosa",
+    "nome": "Camisola Estilo Camisetão",
     "categoria": "Pijamas",
-    "preco": "R$ 60,00",
-    "descricao": "Pijama I Love rosa, tamanho M.",
+    "preco": "R$ 35,00",
+    "descricao": "Camisola estilo camisetão, tamanho M.",
     "imagem": "images/produtos/Pijama_I_Love_Rosa_M/1.png",
     "imagens": [
       "images/produtos/Pijama_I_Love_Rosa_M/1.png"
     ],
     "destaque": false,
     "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Pijama I Love Rosa tamanho M."
+    "whatsapp": "Olá, tenho interesse na Camisola Estilo Camisetão tamanho M."
   },
   {
     "id": 28,
     "nome": "Pijama Rosa com Bolso",
     "categoria": "Pijamas",
-    "preco": "R$ 60,00",
+    "preco": "R$ 35,00",
     "descricao": "Pijama rosa com bolso, tamanho G.",
     "imagem": "images/produtos/Pijama_Rosa_Com_Bolso_G/1.png",
     "imagens": [
@@ -417,7 +417,7 @@
     "id": 29,
     "nome": "Pijama Rosa",
     "categoria": "Pijamas",
-    "preco": "R$ 60,00",
+    "preco": "R$ 39,00",
     "descricao": "Pijama rosa tamanho G, confortável e delicado.",
     "imagem": "images/produtos/Pijama_Rosa_G/1.png",
     "imagens": [
