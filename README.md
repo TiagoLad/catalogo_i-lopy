@@ -14,9 +14,9 @@ O catálogo usa `fetch`, portanto deve ser aberto por um servidor HTTP, e não d
 
 - Adicione o logo em `images/logo_principal.jpg`.
 - Adicione as fotos em `images/produtos/` e ajuste os caminhos em `data/produtos.json`.
-- Troque `55SEUNUMEROAQUI` na constante `WHATSAPP_NUMBER` de `assets/js/app.js` e `assets/js/produto.js`. Use país + DDD + número, somente dígitos. Exemplo: `5511999999999`.
-- Troque `SEUINSTAGRAMAQUI` nos links de `index.html`.
-- Edite os itens em `data/produtos.json`. O campo `promocao: true` inclui o produto no filtro **Promoções**.
+- WhatsApp configurado em `assets/js/app.js` e `assets/js/produto.js`: `5515981421352`.
+- Instagram configurado em `index.html`: `https://www.instagram.com/i.llopy/`.
+- Edite nomes, preços, descrições, categorias e fotos em `data/produtos.json`.
 
 Enquanto uma foto não existir, o site exibe automaticamente uma imagem ilustrativa sem quebrar o layout.
 
@@ -38,7 +38,7 @@ Todos os caminhos são relativos, então o projeto funciona também em uma subpa
 ├── data/produtos.json
 ├── images/
 │   ├── logo_principal.jpg
-│   └── produtos/exemplo-01.jpg, exemplo-02.jpg, exemplo-03.jpg
+│   └── produtos/
 └── assets/
     ├── css/style.css
     └── js/app.js, produto.js

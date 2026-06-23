@@ -1,6 +1,6 @@
 // Edite apenas esta constante para trocar o número de atendimento.
 // Use código do país + DDD + número, somente dígitos. Ex.: 5511999999999.
-const WHATSAPP_NUMBER = "55SEUNUMEROAQUI";
+const WHATSAPP_NUMBER = "5515981421352";
 
 const state = { products: [], category: "Todos", search: "" };
 const grid = document.querySelector("#product-grid");
@@ -26,12 +26,13 @@ function normalizeText(text) {
 function createProductCard(product) {
   const card = document.createElement("article");
   card.className = "product-card";
+  const coverImage = product.imagem || product.imagens?.[0] || "";
 
   const imageWrap = document.createElement("div");
   imageWrap.className = "product-image-wrap";
   const image = document.createElement("img");
   image.className = "product-image";
-  image.src = product.imagem;
+  image.src = coverImage;
   image.alt = `${product.nome} — ${product.categoria}`;
   image.loading = "lazy";
   image.decoding = "async";

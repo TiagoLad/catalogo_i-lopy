@@ -1,10 +1,247 @@
 [
-  {"id":1,"nome":"Baby Doll Rosa","categoria":"Baby Doll","preco":"R$ 89,90","descricao":"Peça confortável, delicada e ideal para noites mais leves.","imagem":"images/produtos/exemplo-01.jpg","destaque":true,"promocao":false,"whatsapp":"Olá, tenho interesse no Baby Doll Rosa."},
-  {"id":2,"nome":"Conjunto Delicadeza","categoria":"Conjuntos","preco":"R$ 79,90","descricao":"Conjunto elegante com caimento confortável para o dia a dia.","imagem":"images/produtos/exemplo-02.jpg","destaque":true,"promocao":false,"whatsapp":"Olá, tenho interesse no Conjunto Delicadeza."},
-  {"id":3,"nome":"Calcinha Conforto Nude","categoria":"Calcinhas","preco":"R$ 29,90","descricao":"Modelagem confortável, acabamento suave e ajuste perfeito.","imagem":"images/produtos/exemplo-03.jpg","destaque":false,"promocao":false,"whatsapp":"Olá, tenho interesse na Calcinha Conforto Nude."},
-  {"id":4,"nome":"Sutiã Essencial Preto","categoria":"Sutiãs","preco":"R$ 59,90","descricao":"Sustentação na medida certa com design moderno e versátil.","imagem":"images/produtos/exemplo-01.jpg","destaque":false,"promocao":false,"whatsapp":"Olá, tenho interesse no Sutiã Essencial Preto."},
-  {"id":5,"nome":"Pijama Serenidade","categoria":"Pijamas","preco":"R$ 109,90","descricao":"Pijama macio e leve para transformar o descanso em bem-estar.","imagem":"images/produtos/exemplo-02.jpg","destaque":true,"promocao":false,"whatsapp":"Olá, tenho interesse no Pijama Serenidade."},
-  {"id":6,"nome":"Conjunto Romance Rosé","categoria":"Conjuntos","preco":"R$ 69,90","descricao":"Delicadeza e conforto em um conjunto de acabamento refinado.","imagem":"images/produtos/exemplo-03.jpg","destaque":false,"promocao":true,"whatsapp":"Olá, tenho interesse no Conjunto Romance Rosé em promoção."},
-  {"id":7,"nome":"Kit Calcinhas Dia a Dia","categoria":"Calcinhas","preco":"R$ 49,90","descricao":"Kit prático com peças leves e confortáveis para todos os dias.","imagem":"images/produtos/exemplo-01.jpg","destaque":false,"promocao":true,"whatsapp":"Olá, tenho interesse no Kit Calcinhas Dia a Dia em promoção."},
-  {"id":8,"nome":"Baby Doll Encanto","categoria":"Baby Doll","preco":"R$ 94,90","descricao":"Visual delicado, tecido agradável e liberdade de movimentos.","imagem":"images/produtos/exemplo-02.jpg","destaque":false,"promocao":false,"whatsapp":"Olá, tenho interesse no Baby Doll Encanto."}
+  {
+    "id": 1,
+    "nome": "Baby Doll Branco",
+    "categoria": "Baby Doll",
+    "preco": "R$ 60,00",
+    "descricao": "Baby doll branco tamanho P, leve e delicado.",
+    "imagem": "images/produtos/Baby_Doll-Branco_P/1.jpeg",
+    "imagens": [
+      "images/produtos/Baby_Doll-Branco_P/1.jpeg",
+      "images/produtos/Baby_Doll-Branco_P/2.jpeg",
+      "images/produtos/Baby_Doll-Branco_P/3.jpeg",
+      "images/produtos/Baby_Doll-Branco_P/4.jpeg"
+    ],
+    "destaque": true,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Baby Doll Branco tamanho P."
+  },
+  {
+    "id": 2,
+    "nome": "Baby Doll Marsala",
+    "categoria": "Baby Doll",
+    "preco": "R$ 60,00",
+    "descricao": "Baby doll marsala tamanho M, com caimento confortável.",
+    "imagem": "images/produtos/Baby_Doll_Marsala_M/1.jpg",
+    "imagens": [
+      "images/produtos/Baby_Doll_Marsala_M/1.jpg",
+      "images/produtos/Baby_Doll_Marsala_M/2.jpg",
+      "images/produtos/Baby_Doll_Marsala_M/3.jpg"
+    ],
+    "destaque": true,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Baby Doll Marsala tamanho M."
+  },
+  {
+    "id": 3,
+    "nome": "Baby Doll Preto e Vermelho",
+    "categoria": "Baby Doll",
+    "preco": "R$ 60,00",
+    "descricao": "Baby doll preto e vermelho com renda, tamanho G.",
+    "imagem": "images/produtos/Baby_Doll_Preto_Vermelho_Renda_G/1.jpg",
+    "imagens": [
+      "images/produtos/Baby_Doll_Preto_Vermelho_Renda_G/1.jpg"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Baby Doll Preto e Vermelho tamanho G."
+  },
+  {
+    "id": 4,
+    "nome": "Baby Doll Verde Militar",
+    "categoria": "Baby Doll",
+    "preco": "R$ 60,00",
+    "descricao": "Baby doll verde militar tamanho G, moderno e confortável.",
+    "imagem": "images/produtos/Baby_Doll_Verde_Militar_G/1.jpg",
+    "imagens": [
+      "images/produtos/Baby_Doll_Verde_Militar_G/1.jpg",
+      "images/produtos/Baby_Doll_Verde_Militar_G/2.jpg",
+      "images/produtos/Baby_Doll_Verde_Militar_G/3.jpg"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Baby Doll Verde Militar tamanho G."
+  },
+  {
+    "id": 5,
+    "nome": "Macaquinho em Cetim",
+    "categoria": "Macaquinhos",
+    "preco": "R$ 29,00",
+    "descricao": "Macaquinho em cetim tamanho G, elegante e suave ao toque.",
+    "imagem": "images/produtos/Camisola_Cetim_G/1.jpg",
+    "imagens": [
+      "images/produtos/Camisola_Cetim_G/1.jpg"
+    ],
+    "destaque": true,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Macaquinho em Cetim tamanho G."
+  },
+  {
+    "id": 6,
+    "nome": "Camisola Vermelha",
+    "categoria": "Camisolas",
+    "preco": "R$ 39,00",
+    "descricao": "Camisola vermelha tamanho M, delicada e marcante.",
+    "imagem": "images/produtos/Camisola_Vernelha_Bruale_M/1.jpg",
+    "imagens": [
+      "images/produtos/Camisola_Vernelha_Bruale_M/1.jpg"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse na Camisola Vermelha tamanho M."
+  },
+  {
+    "id": 7,
+    "nome": "Camisola Vermelha com Renda Preta",
+    "categoria": "Camisolas",
+    "preco": "R$ 60,00",
+    "descricao": "Camisola vermelha com renda preta, disponível nos tamanhos M e G.",
+    "imagem": "images/produtos/Camisola_Vermelha_Renda_M_G/1.jpg",
+    "imagens": [
+      "images/produtos/Camisola_Vermelha_Renda_M_G/1.jpg",
+      "images/produtos/Camisola_Vermelha_Renda_M_G/2.jpg",
+      "images/produtos/Camisola_Vermelha_Renda_M_G/3.jpg"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse na Camisola Vermelha com Renda Preta tamanhos M/G."
+  },
+  {
+    "id": 8,
+    "nome": "Pijama Gatinho",
+    "categoria": "Pijamas",
+    "preco": "R$ 34,90",
+    "descricao": "Pijama gatinho disponível nos tamanhos P e M.",
+    "imagem": "images/produtos/Pijama_Gatinho_PeM/1.jpg",
+    "imagens": [
+      "images/produtos/Pijama_Gatinho_PeM/1.jpg",
+      "images/produtos/Pijama_Gatinho_PeM/2.jpg"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Pijama Gatinho tamanhos P/M."
+  },
+  {
+    "id": 9,
+    "nome": "Pijama Laranja",
+    "categoria": "Pijamas",
+    "preco": "R$ 60,00",
+    "descricao": "Pijama longo laranja tamanho P, confortável para noites frescas.",
+    "imagem": "images/produtos/Pijama_Longo_Laranja_P/1.jpg",
+    "imagens": [
+      "images/produtos/Pijama_Longo_Laranja_P/1.jpg",
+      "images/produtos/Pijama_Longo_Laranja_P/2.jpg",
+      "images/produtos/Pijama_Longo_Laranja_P/3.jpg"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Pijama Laranja tamanho P."
+  },
+  {
+    "id": 10,
+    "nome": "Pijama Preto",
+    "categoria": "Pijamas",
+    "preco": "R$ 60,00",
+    "descricao": "Pijama preto comprido tamanho G, básico e aconchegante.",
+    "imagem": "images/produtos/Pijama_Preto_Comprido_G/1.jpg",
+    "imagens": [
+      "images/produtos/Pijama_Preto_Comprido_G/1.jpg",
+      "images/produtos/Pijama_Preto_Comprido_G/2.jpg"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Pijama Preto tamanho G."
+  },
+  {
+    "id": 11,
+    "nome": "Mini Baby Doll Rosa e Verde",
+    "categoria": "Mini Baby Doll",
+    "preco": "R$ 14,90",
+    "descricao": "Mini baby doll rosa e verde, tamanho único.",
+    "imagem": "images/produtos/Mini_Baby_Doll_Rosa_Verde_Tamanho_Unico/1.jpg",
+    "imagens": [
+      "images/produtos/Mini_Baby_Doll_Rosa_Verde_Tamanho_Unico/1.jpg",
+      "images/produtos/Mini_Baby_Doll_Rosa_Verde_Tamanho_Unico/2.jpg",
+      "images/produtos/Mini_Baby_Doll_Rosa_Verde_Tamanho_Unico/3.jpg"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Mini Baby Doll Rosa e Verde tamanho único."
+  },
+  {
+    "id": 12,
+    "nome": "Mini Baby Doll Laranja",
+    "categoria": "Mini Baby Doll",
+    "preco": "R$ 14,90",
+    "descricao": "Mini baby doll laranja, tamanho único.",
+    "imagem": "images/produtos/Mini_Baby_Doll_Laranja_Tamanho_Unico/1.jpg",
+    "imagens": [
+      "images/produtos/Mini_Baby_Doll_Laranja_Tamanho_Unico/1.jpg",
+      "images/produtos/Mini_Baby_Doll_Laranja_Tamanho_Unico/2.jpg",
+      "images/produtos/Mini_Baby_Doll_Laranja_Tamanho_Unico/3.jpg"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Mini Baby Doll Laranja tamanho único."
+  },
+  {
+    "id": 13,
+    "nome": "Mini Baby Doll Verde",
+    "categoria": "Mini Baby Doll",
+    "preco": "R$ 14,90",
+    "descricao": "Mini baby doll verde, tamanho único.",
+    "imagem": "images/produtos/Mini_Baby_Doll_Verde_Tamanho_Unico/1.jpg",
+    "imagens": [
+      "images/produtos/Mini_Baby_Doll_Verde_Tamanho_Unico/1.jpg",
+      "images/produtos/Mini_Baby_Doll_Verde_Tamanho_Unico/2.jpg",
+      "images/produtos/Mini_Baby_Doll_Verde_Tamanho_Unico/3.jpg"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Mini Baby Doll Verde tamanho único."
+  },
+  {
+    "id": 14,
+    "nome": "Robe Vermelho",
+    "categoria": "Robes",
+    "preco": "R$ 60,00",
+    "descricao": "Robe vermelho com renda, disponível nos tamanhos M e GG.",
+    "imagem": "images/produtos/Robe_Vermelho_Com_Renda_M_GG/1.jpg",
+    "imagens": [
+      "images/produtos/Robe_Vermelho_Com_Renda_M_GG/1.jpg",
+      "images/produtos/Robe_Vermelho_Com_Renda_M_GG/2.jpg"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Robe Vermelho tamanhos M/GG."
+  },
+  {
+    "id": 15,
+    "nome": "Robe Marsala",
+    "categoria": "Robes",
+    "preco": "R$ 60,00",
+    "descricao": "Robe marsala com renda, disponível nos tamanhos M e GG.",
+    "imagem": "images/produtos/Robe_Marsala_Renda_M_GG/1.jpg",
+    "imagens": [
+      "images/produtos/Robe_Marsala_Renda_M_GG/1.jpg"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Robe Marsala tamanhos M/GG."
+  },
+  {
+    "id": 16,
+    "nome": "Robe Vermelho com Renda Preta",
+    "categoria": "Robes",
+    "preco": "R$ 60,00",
+    "descricao": "Robe vermelho com renda preta, disponível nos tamanhos P e M.",
+    "imagem": "images/produtos/Robe_Vermelho_Renda_Preto_P_M/1.jpg",
+    "imagens": [
+      "images/produtos/Robe_Vermelho_Renda_Preto_P_M/1.jpg",
+      "images/produtos/Robe_Vermelho_Renda_Preto_P_M/2.jpg"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Robe Vermelho com Renda Preta tamanhos P/M."
+  }
 ]

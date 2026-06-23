@@ -1,5 +1,5 @@
 // Edite apenas esta constante para trocar o número de atendimento.
-const WHATSAPP_NUMBER = "55SEUNUMEROAQUI";
+const WHATSAPP_NUMBER = "5515981421352";
 
 const statusBox = document.querySelector("#product-status");
 const detail = document.querySelector("#product-detail");
@@ -20,15 +20,48 @@ function showError(message) {
 }
 
 function renderProduct(product) {
+  const images = Array.isArray(product.imagens) && product.imagens.length ? product.imagens : [product.imagem];
+  let selectedImage = images[0];
+
   const imageWrap = document.createElement("div");
   imageWrap.className = "detail-image-wrap";
   const image = document.createElement("img");
   image.className = "detail-image";
-  image.src = product.imagem;
+  image.src = selectedImage;
   image.alt = `${product.nome} — ${product.categoria}`;
   image.decoding = "async";
   image.addEventListener("error", () => { image.src = placeholderImage(product.nome); }, { once: true });
+
+  const gallery = document.createElement("div");
+  gallery.className = "detail-gallery";
   imageWrap.append(image);
+
+  if (images.length > 1) {
+    images.forEach((source, index) => {
+      const button = document.createElement("button");
+      button.className = "gallery-thumb";
+      button.type = "button";
+      button.setAttribute("aria-label", `Ver foto ${index + 1} de ${product.nome}`);
+      button.setAttribute("aria-pressed", String(source === selectedImage));
+
+      const thumb = document.createElement("img");
+      thumb.src = source;
+      thumb.alt = "";
+      thumb.loading = "lazy";
+      thumb.decoding = "async";
+      button.append(thumb);
+
+      button.addEventListener("click", () => {
+        selectedImage = source;
+        image.src = source;
+        gallery.querySelectorAll(".gallery-thumb").forEach((item) => {
+          item.setAttribute("aria-pressed", String(item === button));
+        });
+      });
+
+      gallery.append(button);
+    });
+  }
 
   const content = document.createElement("div");
   content.className = "detail-content";
@@ -51,14 +84,16 @@ function renderProduct(product) {
   buyLink.textContent = "Comprar pelo WhatsApp";
   content.append(category, title, price, description, buyLink);
 
-  detail.replaceChildren(imageWrap, content);
+  detail.classList.toggle("has-gallery", images.length > 1);
+  const detailChildren = images.length > 1 ? [imageWrap, gallery, content] : [imageWrap, content];
+  detail.replaceChildren(...detailChildren);
   detail.hidden = false;
   statusBox.hidden = true;
   document.title = `${product.nome} | I-llopy`;
   document.querySelector('meta[name="description"]').content = `${product.nome}: ${product.descricao}`;
   document.querySelector('meta[property="og:title"]').content = `${product.nome} | I-llopy`;
   document.querySelector('meta[property="og:description"]').content = product.descricao;
-  document.querySelector('meta[property="og:image"]').content = product.imagem;
+  document.querySelector('meta[property="og:image"]').content = selectedImage;
 }
 
 async function loadProduct() {
@@ -78,4 +113,9 @@ async function loadProduct() {
   }
 }
 
+document.querySelectorAll(".js-general-whatsapp").forEach((link) => {
+  link.href = whatsappUrl("Olá! Gostaria de conhecer o catálogo da I-llopy.");
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+});
 loadProduct();
