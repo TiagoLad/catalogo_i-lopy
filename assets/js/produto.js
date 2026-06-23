@@ -47,7 +47,7 @@ function renderProduct(product) {
       const thumb = document.createElement("img");
       thumb.src = source;
       thumb.alt = "";
-      thumb.loading = "lazy";
+      thumb.loading = "eager";
       thumb.decoding = "async";
       button.append(thumb);
 
@@ -73,6 +73,9 @@ function renderProduct(product) {
   const price = document.createElement("p");
   price.className = "detail-price";
   price.textContent = product.preco;
+  const saleNote = document.createElement("p");
+  saleNote.className = "detail-sale-note";
+  saleNote.textContent = "Preço de liquidação";
   const description = document.createElement("p");
   description.className = "detail-description";
   description.textContent = product.descricao;
@@ -82,7 +85,7 @@ function renderProduct(product) {
   buyLink.target = "_blank";
   buyLink.rel = "noopener noreferrer";
   buyLink.textContent = "Comprar pelo WhatsApp";
-  content.append(category, title, price, description, buyLink);
+  content.append(category, title, price, saleNote, description, buyLink);
 
   detail.classList.toggle("has-gallery", images.length > 1);
   const detailChildren = images.length > 1 ? [imageWrap, gallery, content] : [imageWrap, content];
