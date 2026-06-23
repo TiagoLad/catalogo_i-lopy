@@ -231,10 +231,10 @@
   },
   {
     "id": 16,
-    "nome": "Robe Vermelho com Renda Preta",
+    "nome": "Robe Preto com Renda Vermelha",
     "categoria": "Robes",
     "preco": "R$ 60,00",
-    "descricao": "Robe vermelho com renda preta, disponível nos tamanhos P e M.",
+    "descricao": "Robe preto com renda vermelha, disponível nos tamanhos P e M.",
     "imagem": "images/produtos/Robe_Vermelho_Renda_Preto_P_M/1.jpg",
     "imagens": [
       "images/produtos/Robe_Vermelho_Renda_Preto_P_M/1.jpg",
@@ -242,6 +242,203 @@
     ],
     "destaque": false,
     "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Robe Vermelho com Renda Preta tamanhos P/M."
+    "whatsapp": "Olá, tenho interesse no Robe Preto com Renda Vermelha tamanhos P/M."
+  },
+  {
+    "id": 17,
+    "nome": "Baby Doll de Malha Canelada com Detalhes em Renda",
+    "categoria": "Baby Doll",
+    "preco": "R$ 60,00",
+    "descricao": "Baby doll de malha canelada com detalhes em renda, tamanho G.",
+    "imagem": "images/produtos/Baby_Doll_Malha_Canelada_Com_ detalhes_ em_renda_G/1.jpg",
+    "imagens": [
+      "images/produtos/Baby_Doll_Malha_Canelada_Com_ detalhes_ em_renda_G/1.jpg",
+      "images/produtos/Baby_Doll_Malha_Canelada_Com_ detalhes_ em_renda_G/2.jpg"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Baby Doll de Malha Canelada com Detalhes em Renda tamanho G."
+  },
+  {
+    "id": 18,
+    "nome": "Pijama de Alça",
+    "categoria": "Pijamas",
+    "preco": "R$ 60,00",
+    "descricao": "Pijama de alça tamanho M, leve e confortável.",
+    "imagem": "images/produtos/Pijama_Alça_M/1.png",
+    "imagens": [
+      "images/produtos/Pijama_Alça_M/1.png"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Pijama de Alça tamanho M."
+  },
+  {
+    "id": 19,
+    "nome": "Pijama Americano Cinza com Calça",
+    "categoria": "Pijamas",
+    "preco": "R$ 60,00",
+    "descricao": "Pijama americano cinza com calça, tamanho G.",
+    "imagem": "images/produtos/Pijama_Americano_Cinza_Com_Calça_G/1.png",
+    "imagens": [
+      "images/produtos/Pijama_Americano_Cinza_Com_Calça_G/1.png"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Pijama Americano Cinza com Calça tamanho G."
+  },
+  {
+    "id": 20,
+    "nome": "Pijama Americano Cinza",
+    "categoria": "Pijamas",
+    "preco": "R$ 60,00",
+    "descricao": "Pijama americano cinza, disponível nos tamanhos G e GG.",
+    "imagem": "images/produtos/Pijama_Americano_Cinza_G_GG/1.png",
+    "imagens": [
+      "images/produtos/Pijama_Americano_Cinza_G_GG/1.png"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Pijama Americano Cinza tamanhos G/GG."
+  },
+  {
+    "id": 21,
+    "nome": "Pijama Americano",
+    "categoria": "Pijamas",
+    "preco": "R$ 60,00",
+    "descricao": "Pijama americano tamanho M, confortável e elegante.",
+    "imagem": "images/produtos/Pijama_Americano_M/1.jpg",
+    "imagens": [
+      "images/produtos/Pijama_Americano_M/1.jpg"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Pijama Americano tamanho M."
+  },
+  {
+    "id": 22,
+    "nome": "Pijama Americano VL",
+    "categoria": "Pijamas",
+    "preco": "R$ 60,00",
+    "descricao": "Pijama americano VL tamanho M, moderno e confortável.",
+    "imagem": "images/produtos/Pijama_Americano_VL_M/1.png",
+    "imagens": [
+      "images/produtos/Pijama_Americano_VL_M/1.png"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Pijama Americano VL tamanho M."
+  },
+  {
+    "id": 23,
+    "nome": "Pijama Americano Verde",
+    "categoria": "Pijamas",
+    "preco": "R$ 60,00",
+    "descricao": "Pijama americano verde tamanho M, leve e confortável.",
+    "imagem": "images/produtos/Pijama_Americano_Verde_M/1.png",
+    "imagens": [
+      "images/produtos/Pijama_Americano_Verde_M/1.png"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Pijama Americano Verde tamanho M."
+  },
+  {
+    "id": 24,
+    "nome": "Pijama Branco com Bolso",
+    "categoria": "Pijamas",
+    "preco": "R$ 60,00",
+    "descricao": "Pijama branco com bolso, tamanho G.",
+    "imagem": "images/produtos/Pijama_Branco_Com_Bolso_G/1.png",
+    "imagens": [
+      "images/produtos/Pijama_Branco_Com_Bolso_G/1.png"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Pijama Branco com Bolso tamanho G."
+  },
+  {
+    "id": 25,
+    "nome": "Pijama com Estampa",
+    "categoria": "Pijamas",
+    "preco": "R$ 60,00",
+    "descricao": "Pijama com estampa, tamanho G.",
+    "imagem": "images/produtos/Pijama_Com_Estampa_G/1.png",
+    "imagens": [
+      "images/produtos/Pijama_Com_Estampa_G/1.png"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Pijama com Estampa tamanho G."
+  },
+  {
+    "id": 26,
+    "nome": "Pijama Florido",
+    "categoria": "Pijamas",
+    "preco": "R$ 60,00",
+    "descricao": "Pijama florido tamanho G, leve e delicado.",
+    "imagem": "images/produtos/Pijama_Florido_G/1.png",
+    "imagens": [
+      "images/produtos/Pijama_Florido_G/1.png"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Pijama Florido tamanho G."
+  },
+  {
+    "id": 27,
+    "nome": "Pijama I Love Rosa",
+    "categoria": "Pijamas",
+    "preco": "R$ 60,00",
+    "descricao": "Pijama I Love rosa, tamanho M.",
+    "imagem": "images/produtos/Pijama_I_Love_Rosa_M/1.png",
+    "imagens": [
+      "images/produtos/Pijama_I_Love_Rosa_M/1.png"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Pijama I Love Rosa tamanho M."
+  },
+  {
+    "id": 28,
+    "nome": "Pijama Rosa com Bolso",
+    "categoria": "Pijamas",
+    "preco": "R$ 60,00",
+    "descricao": "Pijama rosa com bolso, tamanho G.",
+    "imagem": "images/produtos/Pijama_Rosa_Com_Bolso_G/1.png",
+    "imagens": [
+      "images/produtos/Pijama_Rosa_Com_Bolso_G/1.png"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Pijama Rosa com Bolso tamanho G."
+  },
+  {
+    "id": 29,
+    "nome": "Pijama Rosa",
+    "categoria": "Pijamas",
+    "preco": "R$ 60,00",
+    "descricao": "Pijama rosa tamanho G, confortável e delicado.",
+    "imagem": "images/produtos/Pijama_Rosa_G/1.png",
+    "imagens": [
+      "images/produtos/Pijama_Rosa_G/1.png"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Pijama Rosa tamanho G."
+  },
+  {
+    "id": 30,
+    "nome": "Pijama Roxo Good Night",
+    "categoria": "Pijamas",
+    "preco": "R$ 60,00",
+    "descricao": "Pijama roxo Good Night, tamanho M.",
+    "imagem": "images/produtos/Pijama_Roxo_Good_Night_M/1.png",
+    "imagens": [
+      "images/produtos/Pijama_Roxo_Good_Night_M/1.png"
+    ],
+    "destaque": false,
+    "promocao": false,
+    "whatsapp": "Olá, tenho interesse no Pijama Roxo Good Night tamanho M."
   }
 ]
