@@ -19,41 +19,75 @@ function showError(message) {
   statusBox.innerHTML = `<p><strong>${message}</strong><br><a class="back-link" href="index.html">Voltar ao catálogo</a></p>`;
 }
 
-function renderProduct(product) {
-  const images = Array.isArray(product.imagens) && product.imagens.length ? product.imagens : [product.imagem];
-  let selectedImage = images[0];
+function mediaFromProduct(product) {
+  const images = Array.isArray(product.imagens) && product.imagens.length ? product.imagens : [product.imagem].filter(Boolean);
+  const videos = Array.isArray(product.videos) ? product.videos : [];
+  return [
+    ...images.map((source) => ({ type: "image", source })),
+    ...videos.map((source) => ({ type: "video", source }))
+  ];
+}
 
-  const imageWrap = document.createElement("div");
-  imageWrap.className = "detail-image-wrap";
+function createMediaElement(media, product) {
+  if (media.type === "video") {
+    const video = document.createElement("video");
+    video.className = "detail-video";
+    video.src = media.source;
+    video.controls = true;
+    video.playsInline = true;
+    video.preload = "metadata";
+    video.setAttribute("aria-label", `${product.nome} em vídeo`);
+    return video;
+  }
+
   const image = document.createElement("img");
   image.className = "detail-image";
-  image.src = selectedImage;
+  image.src = media.source;
   image.alt = `${product.nome} — ${product.categoria}`;
   image.decoding = "async";
   image.addEventListener("error", () => { image.src = placeholderImage(product.nome); }, { once: true });
+  return image;
+}
+
+function renderProduct(product) {
+  const mediaItems = mediaFromProduct(product);
+  const selectedMedia = mediaItems[0] || { type: "image", source: "" };
+
+  const imageWrap = document.createElement("div");
+  imageWrap.className = "detail-image-wrap";
+  imageWrap.append(createMediaElement(selectedMedia, product));
 
   const gallery = document.createElement("div");
   gallery.className = "detail-gallery";
-  imageWrap.append(image);
 
-  if (images.length > 1) {
-    images.forEach((source, index) => {
+  if (mediaItems.length > 1) {
+    mediaItems.forEach((media, index) => {
       const button = document.createElement("button");
       button.className = "gallery-thumb";
       button.type = "button";
-      button.setAttribute("aria-label", `Ver foto ${index + 1} de ${product.nome}`);
-      button.setAttribute("aria-pressed", String(source === selectedImage));
+      button.setAttribute("aria-label", media.type === "video" ? `Ver vídeo de ${product.nome}` : `Ver foto ${index + 1} de ${product.nome}`);
+      button.setAttribute("aria-pressed", String(media === selectedMedia));
 
-      const thumb = document.createElement("img");
-      thumb.src = source;
-      thumb.alt = "";
-      thumb.loading = "eager";
-      thumb.decoding = "async";
-      button.append(thumb);
+      if (media.type === "video") {
+        const thumb = document.createElement("video");
+        thumb.src = media.source;
+        thumb.muted = true;
+        thumb.playsInline = true;
+        thumb.preload = "metadata";
+        thumb.setAttribute("aria-hidden", "true");
+        button.append(thumb);
+        button.classList.add("gallery-thumb-video");
+      } else {
+        const thumb = document.createElement("img");
+        thumb.src = media.source;
+        thumb.alt = "";
+        thumb.loading = "eager";
+        thumb.decoding = "async";
+        button.append(thumb);
+      }
 
       button.addEventListener("click", () => {
-        selectedImage = source;
-        image.src = source;
+        imageWrap.replaceChildren(createMediaElement(media, product));
         gallery.querySelectorAll(".gallery-thumb").forEach((item) => {
           item.setAttribute("aria-pressed", String(item === button));
         });
@@ -87,8 +121,8 @@ function renderProduct(product) {
   buyLink.textContent = "Comprar pelo WhatsApp";
   content.append(category, title, price, saleNote, description, buyLink);
 
-  detail.classList.toggle("has-gallery", images.length > 1);
-  const detailChildren = images.length > 1 ? [imageWrap, gallery, content] : [imageWrap, content];
+  detail.classList.toggle("has-gallery", mediaItems.length > 1);
+  const detailChildren = mediaItems.length > 1 ? [imageWrap, gallery, content] : [imageWrap, content];
   detail.replaceChildren(...detailChildren);
   detail.hidden = false;
   statusBox.hidden = true;
@@ -96,7 +130,7 @@ function renderProduct(product) {
   document.querySelector('meta[name="description"]').content = `${product.nome}: ${product.descricao}`;
   document.querySelector('meta[property="og:title"]').content = `${product.nome} | I-llopy`;
   document.querySelector('meta[property="og:description"]').content = product.descricao;
-  document.querySelector('meta[property="og:image"]').content = selectedImage;
+  document.querySelector('meta[property="og:image"]').content = product.imagem || mediaItems.find((media) => media.type === "image")?.source || "images/logo_principal.jpg";
 }
 
 async function loadProduct() {
