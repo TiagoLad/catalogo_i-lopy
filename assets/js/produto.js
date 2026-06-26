@@ -165,10 +165,10 @@ function renderProduct(product) {
         <button class="btn btn-outline" type="button" data-favorite="${product.id}">${isFavorite ? "Remover da lista de desejos" : "Adicionar a lista de desejos"}</button>
       </div>
 
-      <div class="purchase-benefits" aria-label="Beneficios da compra">
-        <span>Frete para todo o Brasil</span>
-        <span>Troca fácil em até 7 dias</span>
-        <span>Compra 100% segura</span>
+      <div class="purchase-benefits" aria-label="Informações do atendimento">
+        <span>Atendimento direto pelo WhatsApp</span>
+        <span>Confirmação de cor, tamanho e disponibilidade</span>
+        <span>Pedido finalizado com orientação da loja</span>
       </div>
 
       <div class="accordion">

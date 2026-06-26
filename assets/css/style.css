@@ -731,3 +731,147 @@ h1 span { display: block; color: var(--pink); font-style: italic; }
     justify-self: start;
   }
 }
+/* Product detail mobile layout fix */
+.product-summary .btn-outline {
+  color: var(--ink);
+  border-color: var(--line-soft);
+  background: #fff;
+}
+
+.product-summary .btn-outline:hover {
+  color: var(--pink);
+  border-color: var(--pink);
+  background: #fff5f8;
+}
+
+@media (max-width: 820px) {
+  .product-detail {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    overflow: hidden;
+  }
+
+  .product-gallery,
+  .product-summary {
+    position: static;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .product-gallery {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .main-image-wrap {
+    width: 100%;
+  }
+
+  .main-image-wrap img {
+    width: 100%;
+    max-height: 520px;
+    object-fit: cover;
+  }
+
+  .thumbnails {
+    order: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(58px, 1fr));
+    gap: 8px;
+  }
+
+  .thumb-button {
+    aspect-ratio: 1;
+  }
+}
+
+@media (max-width: 520px) {
+  .breadcrumb {
+    padding: 18px 0 14px;
+  }
+
+  .product-summary {
+    padding: 18px;
+  }
+
+  .product-summary h1 {
+    font-size: 26px;
+  }
+
+  .detail-price .current-price {
+    font-size: 30px;
+  }
+
+  .detail-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+/* Mobile footer full-height fix */
+.site-footer {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+@media (max-width: 820px) {
+  body {
+    padding-bottom: 0;
+    background: var(--black);
+  }
+
+  body:has(.mobile-shop-nav) {
+    padding-bottom: 74px;
+  }
+
+  .site-footer {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+
+  .footer-grid {
+    width: min(100% - 24px, 1180px);
+  }
+
+  .copyright {
+    padding: 18px 68px 24px 16px;
+  }
+}
+/* Instagram social icon */
+.instagram-link {
+  background: radial-gradient(circle at 30% 110%, #fdf497 0 18%, #fd5949 42%, #d6249f 62%, #285aeb 100%);
+  border-color: rgba(255, 255, 255, .18);
+}
+
+.instagram-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+/* Pink hamburger menu bars */
+.menu-toggle {
+  color: var(--pink);
+  border-color: rgba(233, 30, 99, .45);
+}
+
+.menu-toggle span {
+  background: var(--pink);
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+  border-color: var(--pink);
+  background: rgba(233, 30, 99, .1);
+}
