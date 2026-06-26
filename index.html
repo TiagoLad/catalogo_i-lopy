@@ -3,83 +3,279 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Catálogo online I-llopy: moda íntima com conforto, beleza e delicadeza.">
-  <meta name="theme-color" content="#d93379">
-  <meta property="og:title" content="Catálogo I-llopy | Moda íntima">
-  <meta property="og:description" content="Conheça a coleção I-llopy e compre com facilidade pelo WhatsApp.">
+  <title>I-llopy | Boutique de moda íntima pelo WhatsApp</title>
+  <meta name="description" content="I-llopy: boutique online de moda íntima, pijamas e robes com curadoria premium, promoções e atendimento direto pelo WhatsApp.">
+  <meta name="theme-color" content="#0b0b0f">
+  <meta property="og:title" content="I-llopy | Boutique de moda íntima">
+  <meta property="og:description" content="Conheça coleções, favoritos e produtos selecionados da I-llopy.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/logo_principal.jpg">
-  <title>Catálogo I-llopy | Moda íntima com conforto e delicadeza</title>
   <link rel="icon" href="images/logo_principal.jpg" type="image/jpeg">
+  <link rel="preload" as="image" href="images/produtos/Pijama_Americano_Verde_M/1.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <a class="skip-link" href="#catalogo">Ir para o catálogo</a>
-  <header class="site-header">
-    <div class="container header-content">
-      <a class="brand" href="index.html" aria-label="I-llopy — página inicial">
-        <span class="logo-frame"><img src="images/logo_principal.jpg" alt="Logo da loja I-llopy" width="64" height="64" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="logo-fallback" hidden aria-hidden="true">I</span></span>
-        <span class="brand-name">I-llopy</span>
+
+  <div class="top-strip" aria-label="Informações da loja">
+    <span>Consulte disponibilidade de cores e tamanhos pelo WhatsApp</span>
+    <span>Atendimento personalizado para finalizar seu pedido</span>
+  </div>
+
+  <header class="site-header" id="inicio">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="I-llopy inicio">
+        <img src="images/logo_principal.jpg" alt="Logo I-llopy" width="74" height="74">
+        <span class="brand-copy"><strong>I-llopy</strong><small>Moda íntima boutique</small></span>
       </a>
-      <nav class="header-actions" aria-label="Redes sociais">
-        <a class="icon-link" href="https://www.instagram.com/i.llopy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da I-llopy">
-          <svg class="contact-icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
-          <span>Instagram</span>
-        </a>
-        <a class="button button-primary button-small icon-button js-general-whatsapp" href="#" aria-label="WhatsApp da I-llopy">
-          <svg class="contact-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M4.8 19.2 6 15.8A7.7 7.7 0 1 1 8.2 18l-3.4 1.2Z"></path><path d="M9.4 8.7c.2-.4.4-.5.7-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.5.6c.6 1.1 1.4 1.9 2.6 2.5l.6-.7c.2-.2.4-.2.6-.1l1.6.8c.3.1.4.3.4.6v.5c0 .3-.2.6-.5.7-.7.3-1.8.2-3.2-.4-1.6-.7-2.9-1.9-3.8-3.5-.7-1.3-1-2.5-.7-3.2Z"></path></svg>
-          <span>WhatsApp</span>
-        </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-menu" id="main-menu" aria-label="Menu principal">
+        <a href="#inicio">Início</a>
+        <a href="#colecoes">Coleções</a>
+        <a href="#destaques">Destaques</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
       </nav>
+
+      <div class="header-commerce" aria-label="Acoes da loja">
+        <label class="header-search">
+          <span aria-hidden="true">⌕</span>
+          <input id="header-search-input" type="search" placeholder="Buscar no catálogo" autocomplete="off" aria-label="Buscar no catálogo">
+        </label>
+        <button class="icon-button favorite-open" type="button" aria-label="Abrir favoritos">♡<span class="count-badge" data-favorites-count>0</span></button>
+        <a class="header-whatsapp js-whatsapp-general" href="#">WhatsApp</a>
+      </div>
     </div>
   </header>
+
   <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero-content"><p class="eyebrow">Liquidação I-llopy</p><h1 id="hero-title">Catálogo <span class="nowrap">I-llopy</span></h1><p>Moda íntima com conforto, beleza e delicadeza. Preços especiais de liquidação por tempo limitado.</p><a class="button button-light" href="#catalogo">Ver coleção</a></div>
+    <section class="editorial-hero" aria-labelledby="hero-title">
+      <div class="hero-image" role="img" aria-label="Modelo usando pijama I-llopy"></div>
+      <div class="container hero-editorial-content">
+        <p class="eyebrow">Nova curadoria I-llopy</p>
+        <h1 id="hero-title">Realce sua <span>essência</span></h1>
+        <p>Moda íntima para cada versão de você, com conforto, presença e compra simples pelo WhatsApp.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#catalogo">Ver catálogo</a>
+          <a class="btn btn-secondary" href="#destaques">Novidades</a>
+        </div>
+      </div>
+      <div class="hero-scroll-note">Role para descobrir</div>
     </section>
-    <section class="catalog-section" id="catalogo" aria-labelledby="catalog-title">
+
+    <section class="benefit-strip" aria-label="Beneficios da compra">
+      <div class="container benefit-grid benefit-grid-compact">
+        <article><span class="benefit-icon">S</span><strong>Compra segura</strong></article>
+        <article><span class="benefit-icon">W</span><strong>Atendimento via WhatsApp</strong></article>
+      </div>
+    </section>
+
+    <section class="section collections-section" id="colecoes" aria-labelledby="colecoes-title">
       <div class="container">
-        <div class="section-heading">
-          <div><p class="eyebrow">Nossa coleção</p><h2 id="catalog-title">Encontre sua peça favorita</h2></div>
-          <label class="search-box"><span class="sr-only">Buscar produto pelo nome</span><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="m21 21-4.35-4.35m2.35-5.15A7.5 7.5 0 1 1 4 11.5a7.5 7.5 0 0 1 15 0Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><input id="search-input" type="search" placeholder="Buscar por nome..." autocomplete="off"></label>
+        <div class="section-heading centered narrow">
+          <p class="eyebrow">Compre por momento</p>
+          <h2 id="colecoes-title">Coleções com narrativa</h2>
+          <p>Em vez de navegar por pratéleiras, escolha a sensação que combina com o seu dia.</p>
         </div>
-        <p class="sale-notice"><strong>Liquidação:</strong> os valores exibidos são preços promocionais e podem variar conforme disponibilidade de cor e tamanho.</p>
-        <div class="filters" id="category-filters" aria-label="Filtrar por categoria">
-          <button class="filter-button active" type="button" data-category="Todos" aria-pressed="true">Todos</button>
-          <button class="filter-button" type="button" data-category="Baby Doll" aria-pressed="false">Baby Doll</button>
-          <button class="filter-button" type="button" data-category="Mini Baby Doll" aria-pressed="false">Mini Baby Doll</button>
-          <button class="filter-button" type="button" data-category="Camisolas" aria-pressed="false">Camisolas</button>
-          <button class="filter-button" type="button" data-category="Macaquinhos" aria-pressed="false">Macaquinhos</button>
-          <button class="filter-button" type="button" data-category="Pijamas" aria-pressed="false">Pijamas</button>
-          <button class="filter-button" type="button" data-category="Robes" aria-pressed="false">Robes</button>
+        <div class="collection-grid">
+          <button class="collection-card tall" type="button" data-collection="Camisolas">
+            <img src="images/produtos/Camisola_Vermelha_Renda_M_G/1.jpg" alt="Coleção Noite Especial">
+            <span>Noite Especial</span>
+            <strong>Renda, brilho e presença</strong>
+          </button>
+          <button class="collection-card" type="button" data-collection="Pijamas">
+            <img src="images/produtos/Pijama_Americano_Verde_M/1.png" alt="Coleção Conforto Diário">
+            <span>Conforto Diário</span>
+            <strong>Pijamas leves e versatéis</strong>
+          </button>
+          <button class="collection-card" type="button" data-collection="Conjuntos">
+            <img src="images/produtos/Baby_Doll_Preto_Vermelho_Renda_G/1.jpg" alt="Coleção Renda e Sensualidade">
+            <span>Renda & Sensualidade</span>
+            <strong>Peças para se sentir poderosa</strong>
+          </button>
+          <button class="collection-card wide" type="button" data-collection="Baby Doll">
+            <img src="images/produtos/Baby_Doll_Marsala_M/1.jpg" alt="Coleção Baby Doll">
+            <span>Baby Doll</span>
+            <strong>Leveza para desacelerar</strong>
+          </button>
         </div>
-        <p class="results-count" id="results-count" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="section story-shop" id="destaques" aria-labelledby="destaques-title">
+      <div class="container">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Curadoria da semana</p>
+            <h2 id="destaques-title">Escolhas prontas para comprar</h2>
+          </div>
+          <a class="text-link" href="#catalogo">Ver catálogo completo</a>
+        </div>
+
+        <div class="story-block">
+          <div class="story-copy">
+            <span>01</span>
+            <h3>Mais vendidos</h3>
+            <p>Peças com melhor resposta para quem quer escolher rapido e acertar no presente.</p>
+          </div>
+          <div class="product-row" id="best-sellers"></div>
+        </div>
+
+        <div class="story-block reverse">
+          <div class="story-copy">
+            <span>02</span>
+            <h3>Ate R$ 50</h3>
+            <p>Achadinhos com preço especial para renovar a gaveta sem perder elegância.</p>
+          </div>
+          <div class="product-row" id="under-50"></div>
+        </div>
+
+        <div class="story-block">
+          <div class="story-copy">
+            <span>03</span>
+            <h3>Novidades</h3>
+            <p>Itens recentes da curadoria I-llopy para quem gosta de ver primeiro.</p>
+          </div>
+          <div class="product-row" id="new-products"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="campaign-band" aria-labelledby="campaign-title">
+      <div class="container campaign-inner">
+        <div>
+          <p class="eyebrow">Atendimento personalizado</p>
+          <h2 id="campaign-title">Escolheu sua peça? Chame no WhatsApp para conferir cores, tamanhos e receber ajuda para finalizar o pedido.</h2>
+        </div>
+        <a class="btn btn-primary js-whatsapp-general" href="#">Falar pelo WhatsApp</a>
+      </div>
+    </section>
+
+    <section class="section catalog-section" id="catalogo" aria-labelledby="catalogo-title">
+      <div class="container">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Catálogo completo</p>
+            <h2 id="catalogo-title">Todas as peças</h2>
+          </div>
+          <div class="catalog-tools">
+            <label class="search-box">
+              <span class="sr-only">Buscar por nome</span>
+              <span aria-hidden="true">⌕</span>
+              <input id="search-input" type="search" placeholder="Buscar produto" autocomplete="off">
+            </label>
+            <label class="sort-box">
+              <span class="sr-only">Ordenar produtos</span>
+              <select id="sort-select" aria-label="Ordenar produtos">
+                <option value="featured">Destaques</option>
+                <option value="price-asc">Menor preço</option>
+                <option value="price-desc">Maior preço</option>
+                <option value="name">Nome A-Z</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="category-carousel compact-categories" id="category-list" aria-label="Categorias do catálogo"></div>
+        <div class="toggle-filters" aria-label="Filtros rapidos">
+          <button class="pill-filter active" type="button" data-filter="todos">Todos</button>
+          <button class="pill-filter" type="button" data-filter="novidade">Novidades</button>
+        </div>
+
+        <div class="catalog-feedback"><p class="result-line" id="result-count" aria-live="polite"></p><button class="clear-filters" id="clear-filters" type="button">Limpar filtros</button></div>
         <div class="status-message" id="catalog-status" role="status"><span class="loader" aria-hidden="true"></span><p>Carregando produtos...</p></div>
-        <div class="product-grid" id="product-grid"></div>
+        <div class="product-grid editorial-grid" id="product-grid"></div>
+      </div>
+    </section>
+
+    <section class="newsletter" aria-labelledby="newsletter-title">
+      <div class="container newsletter-inner">
+        <div>
+          <p class="eyebrow">Novidades pelo WhatsApp</p>
+          <h2 id="newsletter-title">Quer saber quando chegam peças novas?</h2>
+          <p class="newsletter-copy">Chame a I-llopy no WhatsApp para consultar novidades, tamanhos disponíveis e receber atendimento personalizado.</p>
+        </div>
+        <a class="btn btn-dark js-whatsapp-general newsletter-whatsapp" href="#">Falar pelo WhatsApp</a>
+      </div>
+    </section>
+
+    <section class="section about-section" id="sobre" aria-labelledby="sobre-title">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">Sobre nós</p>
+          <h2 id="sobre-title">Uma vitrine digital de moda íntima com atendimento direto</h2>
+        </div>
+        <p>A I-llopy reúne peças selecionadas de moda íntima, pijamas e robes em um catálogo simples de navegar. Você escolhe o produto, confere detalhes e fala pelo WhatsApp para confirmar cor, tamanho e disponibilidade antes de finalizar o pedido.</p>
       </div>
     </section>
   </main>
-  <footer class="site-footer">
+
+  <aside class="favorites-panel" id="favorites-panel" aria-hidden="true" aria-labelledby="favorites-title">
+    <div class="favorites-card">
+      <div class="favorites-head">
+        <div>
+          <p class="eyebrow">Lista de desejos</p>
+          <h2 id="favorites-title">Favoritos</h2>
+        </div>
+        <button class="panel-close" type="button" aria-label="Fechar favoritos">x</button>
+      </div>
+      <div class="favorites-list" id="favorites-list"></div>
+    </div>
+  </aside>
+
+  <nav class="mobile-shop-nav" aria-label="Atalhos mobile">
+    <a href="#inicio"><span>⌂</span>Início</a>
+    <a href="#catalogo"><span>⌕</span>Catálogo</a>
+    <button class="favorite-open" type="button"><span>♡</span>Favoritos</button>
+    <a class="js-whatsapp-general" href="#"><span>W</span>WhatsApp</a>
+  </nav>
+
+  <button class="back-to-top" type="button" aria-label="Voltar ao topo">↑</button>
+
+  <footer class="site-footer" id="contato">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <span class="footer-logo"><img src="images/logo_principal.jpg" alt="Logo da loja I-llopy" width="64" height="64"></span>
-        <strong>I-llopy</strong>
-        <p>Moda íntima, pijamas e robes com conforto para o seu momento.</p>
+        <img src="images/logo_principal.jpg" alt="Logo I-llopy" width="86" height="86">
+        <p>Moda íntima premium com venda direta pelo WhatsApp, atendimento humano e peças selecionadas.</p>
       </div>
-      <nav class="footer-links" aria-label="Contato">
-        <a class="contact-link" href="https://www.instagram.com/i.llopy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da I-llopy">
-          <svg class="contact-icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
-          <span>Instagram</span>
-        </a>
-        <a class="contact-link js-general-whatsapp" href="#" aria-label="WhatsApp da I-llopy">
-          <svg class="contact-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M4.8 19.2 6 15.8A7.7 7.7 0 1 1 8.2 18l-3.4 1.2Z"></path><path d="M9.4 8.7c.2-.4.4-.5.7-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.5.6c.6 1.1 1.4 1.9 2.6 2.5l.6-.7c.2-.2.4-.2.6-.1l1.6.8c.3.1.4.3.4.6v.5c0 .3-.2.6-.5.7-.7.3-1.8.2-3.2-.4-1.6-.7-2.9-1.9-3.8-3.5-.7-1.3-1-2.5-.7-3.2Z"></path></svg>
-          <span>WhatsApp</span>
-        </a>
+      <nav aria-label="Links institucionais">
+        <h3>Institucional</h3>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Trocas e Devoluções</a>
+        <a href="#">Perguntas Frequentes</a>
       </nav>
-      <p class="footer-notice">Preços de liquidação. As cores, tamanhos e disponibilidade podem variar. Consulte pelo WhatsApp antes de finalizar seu pedido.</p>
+      <nav aria-label="Atendimento">
+        <h3>Atendimento</h3>
+        <a class="js-whatsapp-general" href="#">WhatsApp</a>
+        <a href="#">Envio e Prazos</a>
+        <a href="#">Formas de Pagamento</a>
+        <a href="#">Fale Conosco</a>
+      </nav>
+      <div>
+        <h3>Redes sociais</h3>
+        <div class="social-links" aria-label="Redes sociais">
+          <a href="https://www.instagram.com/i.llopy/" target="_blank" rel="noreferrer" aria-label="Instagram">◎</a>
+          <a class="js-whatsapp-general" href="#" aria-label="WhatsApp">W</a>
+          <a href="#" aria-label="TikTok">♪</a>
+          <a href="#" aria-label="Facebook">f</a>
+        </div>
+      </div>
     </div>
     <p class="copyright">© <span id="current-year"></span> I-llopy. Todos os direitos reservados.</p>
   </footer>
+
   <script src="assets/js/app.js" defer></script>
 </body>
 </html>
+
+
+

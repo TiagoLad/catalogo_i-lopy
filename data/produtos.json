@@ -1,447 +1,841 @@
 [
   {
     "id": 1,
+    "nome": "Baby Doll Preto e Vermelho",
+    "categoria": "Baby Doll",
+    "preco": "R$ 49,00",
+    "precoAntigo": "",
+    "parcelamento": "",
+    "descricao": "Baby doll preto com detalhes em vermelho em renda, tamanho G, com visual marcante e toque delicado.",
+    "imagem": "images/produtos/Baby_Doll_Preto_Vermelho_Renda_G/1.jpg",
+    "galeria": [
+      "images/produtos/Baby_Doll_Preto_Vermelho_Renda_G/1.jpg"
+    ],
+    "cores": [
+      "Preto com detalhes em vermelho"
+    ],
+    "tamanhos": [
+      "G"
+    ],
+    "avaliacao": 4.8,
+    "avaliacoes": 24,
+    "desconto": "",
+    "destaque": true,
+    "novidade": false,
+    "promocao": true,
+    "composicao": "Renda e microfibra com toque macio.",
+    "whatsapp": "Olá, tenho interesse no Baby Doll Preto e Vermelho tamanho G, cor preto com detalhes em vermelho."
+  },
+  {
+    "id": 2,
     "nome": "Baby Doll Branco",
     "categoria": "Baby Doll",
     "preco": "R$ 49,00",
-    "descricao": "Baby doll branco tamanho P, leve e delicado.",
+    "precoAntigo": "R$ 69,90",
+    "parcelamento": "3x de R$ 16,33 sem juros",
+    "descricao": "Baby doll branco leve, delicado e confortável para noites especiais.",
     "imagem": "images/produtos/Baby_Doll-Branco_P/1.jpeg",
-    "imagens": [
+    "galeria": [
       "images/produtos/Baby_Doll-Branco_P/1.jpeg",
       "images/produtos/Baby_Doll-Branco_P/2.jpeg",
       "images/produtos/Baby_Doll-Branco_P/3.jpeg",
       "images/produtos/Baby_Doll-Branco_P/4.jpeg"
     ],
+    "cores": [
+      "Branco"
+    ],
+    "tamanhos": [
+      "P"
+    ],
+    "avaliacao": 4.9,
+    "avaliacoes": 31,
+    "desconto": "-30%",
     "destaque": true,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Baby Doll Branco tamanho P."
+    "novidade": true,
+    "promocao": true,
+    "composicao": "Malha leve com detalhes delicados.",
+    "whatsapp": "Olá, tenho interesse no Baby Doll Branco."
   },
   {
-    "id": 2,
+    "id": 3,
     "nome": "Baby Doll Marsala",
     "categoria": "Baby Doll",
     "preco": "R$ 49,00",
-    "descricao": "Baby doll marsala tamanho M, com caimento confortável.",
+    "precoAntigo": "R$ 65,00",
+    "parcelamento": "3x de R$ 16,33 sem juros",
+    "descricao": "Modelo marsala com caimento confortável e acabamento feminino.",
     "imagem": "images/produtos/Baby_Doll_Marsala_M/1.jpg",
-    "imagens": [
+    "galeria": [
       "images/produtos/Baby_Doll_Marsala_M/1.jpg",
       "images/produtos/Baby_Doll_Marsala_M/2.jpg",
       "images/produtos/Baby_Doll_Marsala_M/3.jpg"
     ],
-    "destaque": true,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Baby Doll Marsala tamanho M."
-  },
-  {
-    "id": 3,
-    "nome": "Baby Doll Preto e Vermelho",
-    "categoria": "Baby Doll",
-    "preco": "R$ 49,00",
-    "descricao": "Baby doll preto e vermelho com renda, tamanho G.",
-    "imagem": "images/produtos/Baby_Doll_Preto_Vermelho_Renda_G/1.jpg",
-    "imagens": [
-      "images/produtos/Baby_Doll_Preto_Vermelho_Renda_G/1.jpg"
+    "cores": [
+      "Marsala"
     ],
-    "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Baby Doll Preto e Vermelho tamanho G."
+    "tamanhos": [
+      "M"
+    ],
+    "avaliacao": 4.7,
+    "avaliacoes": 18,
+    "desconto": "-25%",
+    "destaque": true,
+    "novidade": false,
+    "promocao": true,
+    "composicao": "Tecido leve com toque acetinado.",
+    "whatsapp": "Olá, tenho interesse no Baby Doll Marsala."
   },
   {
     "id": 4,
-    "nome": "Baby Doll Verde Militar",
-    "categoria": "Baby Doll",
-    "preco": "R$ 49,00",
-    "descricao": "Baby doll verde militar tamanho G, moderno e confortável.",
-    "imagem": "images/produtos/Baby_Doll_Verde_Militar_G/1.jpg",
-    "imagens": [
-      "images/produtos/Baby_Doll_Verde_Militar_G/1.jpg",
-      "images/produtos/Baby_Doll_Verde_Militar_G/2.jpg",
-      "images/produtos/Baby_Doll_Verde_Militar_G/3.jpg"
-    ],
-    "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Baby Doll Verde Militar tamanho G."
-  },
-  {
-    "id": 5,
-    "nome": "Macaquinho em Cetim",
-    "categoria": "Macaquinhos",
-    "preco": "R$ 29,00",
-    "descricao": "Macaquinho em cetim tamanho G, elegante e suave ao toque.",
-    "imagem": "images/produtos/Camisola_Cetim_G/1.jpg",
-    "imagens": [
-      "images/produtos/Camisola_Cetim_G/1.jpg"
-    ],
-    "destaque": true,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Macaquinho em Cetim tamanho G."
-  },
-  {
-    "id": 6,
     "nome": "Camisola Vermelha",
     "categoria": "Camisolas",
-    "preco": "R$ 39,00",
-    "descricao": "Camisola vermelha tamanho M, delicada e marcante.",
-    "imagem": "images/produtos/Camisola_Vernelha_Bruale_M/1.jpg",
-    "imagens": [
-      "images/produtos/Camisola_Vernelha_Bruale_M/1.jpg"
-    ],
-    "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse na Camisola Vermelha tamanho M."
-  },
-  {
-    "id": 7,
-    "nome": "Camisola Vermelha com Renda Preta",
-    "categoria": "Camisolas",
     "preco": "R$ 50,00",
-    "descricao": "Camisola vermelha com renda preta, disponível nos tamanhos M e G.",
+    "precoAntigo": "R$ 79,90",
+    "parcelamento": "4x de R$ 12,50 sem juros",
+    "descricao": "Camisola vermelha com renda preta, elegante e marcante.",
     "imagem": "images/produtos/Camisola_Vermelha_Renda_M_G/1.jpg",
-    "imagens": [
+    "galeria": [
       "images/produtos/Camisola_Vermelha_Renda_M_G/1.jpg",
       "images/produtos/Camisola_Vermelha_Renda_M_G/2.jpg",
       "images/produtos/Camisola_Vermelha_Renda_M_G/3.jpg"
     ],
-    "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse na Camisola Vermelha com Renda Preta tamanhos M/G."
+    "cores": [
+      "Vermelha"
+    ],
+    "tamanhos": [
+      "M",
+      "G"
+    ],
+    "avaliacao": 4.8,
+    "avaliacoes": 27,
+    "desconto": "-37%",
+    "destaque": true,
+    "novidade": true,
+    "promocao": true,
+    "composicao": "Cetim e renda delicada.",
+    "whatsapp": "Olá, tenho interesse na Camisola Vermelha, cor predominante vermelha."
+  },
+  {
+    "id": 5,
+    "nome": "Macaquinho em Cetim",
+    "categoria": "Pijamas",
+    "preco": "R$ 29,00",
+    "precoAntigo": "R$ 49,90",
+    "parcelamento": "2x de R$ 14,50 sem juros",
+    "descricao": "Macaquinho em cetim com toque suave e brilho elegante.",
+    "imagem": "images/produtos/Camisola_Cetim_G/1.jpg",
+    "galeria": [
+      "images/produtos/Camisola_Cetim_G/1.jpg"
+    ],
+    "cores": [
+      "Rosa"
+    ],
+    "tamanhos": [
+      "G"
+    ],
+    "avaliacao": 4.6,
+    "avaliacoes": 16,
+    "desconto": "-42%",
+    "destaque": true,
+    "novidade": false,
+    "promocao": true,
+    "composicao": "Cetim leve com acabamento macio.",
+    "whatsapp": "Olá, tenho interesse no Macaquinho em Cetim."
+  },
+  {
+    "id": 6,
+    "nome": "Pijama Americano Verde",
+    "categoria": "Pijamas",
+    "preco": "R$ 45,00",
+    "precoAntigo": "R$ 69,90",
+    "parcelamento": "3x de R$ 15,00 sem juros",
+    "descricao": "Pijama americano verde, moderno, leve e confortável para a rotina.",
+    "imagem": "images/produtos/Pijama_Americano_Verde_M/1.png",
+    "galeria": [
+      "images/produtos/Pijama_Americano_Verde_M/1.png"
+    ],
+    "cores": [
+      "Verde"
+    ],
+    "tamanhos": [
+      "M"
+    ],
+    "avaliacao": 4.7,
+    "avaliacoes": 22,
+    "desconto": "-36%",
+    "destaque": true,
+    "novidade": true,
+    "promocao": true,
+    "composicao": "Malha fria de toque leve.",
+    "whatsapp": "Olá, tenho interesse no Pijama Americano Verde."
+  },
+  {
+    "id": 7,
+    "nome": "Robe Marsala Renda",
+    "categoria": "Robes",
+    "preco": "R$ 60,00",
+    "precoAntigo": "R$ 89,90",
+    "parcelamento": "4x de R$ 15,00 sem juros",
+    "descricao": "Robe marsala com renda, ideal para compor um look intimista sofisticado.",
+    "imagem": "images/produtos/Robe_Marsala_Renda_M_GG/1.jpg",
+    "galeria": [
+      "images/produtos/Robe_Marsala_Renda_M_GG/1.jpg"
+    ],
+    "cores": [
+      "Marsala"
+    ],
+    "tamanhos": [
+      "M",
+      "GG"
+    ],
+    "avaliacao": 4.9,
+    "avaliacoes": 19,
+    "desconto": "-33%",
+    "destaque": true,
+    "novidade": false,
+    "promocao": true,
+    "composicao": "Tecido acetinado com renda aplicada.",
+    "whatsapp": "Olá, tenho interesse no Robe Marsala Renda."
   },
   {
     "id": 8,
-    "nome": "Pijama Gatinho",
-    "categoria": "Pijamas",
-    "preco": "R$ 34,90",
-    "descricao": "Pijama gatinho disponível nos tamanhos P e M.",
-    "imagem": "images/produtos/Pijama_Gatinho_PeM/1.jpg",
-    "imagens": [
-      "images/produtos/Pijama_Gatinho_PeM/1.jpg",
-      "images/produtos/Pijama_Gatinho_PeM/2.jpg"
-    ],
-    "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Pijama Gatinho tamanhos P/M."
-  },
-  {
-    "id": 9,
-    "nome": "Pijama Laranja",
-    "categoria": "Pijamas",
-    "preco": "R$ 60,00",
-    "descricao": "Pijama longo laranja tamanho P, confortável para noites frescas.",
-    "imagem": "images/produtos/Pijama_Longo_Laranja_P/1.jpg",
-    "imagens": [
-      "images/produtos/Pijama_Longo_Laranja_P/1.jpg",
-      "images/produtos/Pijama_Longo_Laranja_P/2.jpg",
-      "images/produtos/Pijama_Longo_Laranja_P/3.jpg"
-    ],
-    "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Pijama Laranja tamanho P."
-  },
-  {
-    "id": 10,
-    "nome": "Pijama Preto",
-    "categoria": "Pijamas",
-    "preco": "R$ 60,00",
-    "descricao": "Pijama preto comprido tamanho G, básico e aconchegante.",
-    "imagem": "images/produtos/Pijama_Preto_Comprido_G/1.jpg",
-    "imagens": [
-      "images/produtos/Pijama_Preto_Comprido_G/1.jpg",
-      "images/produtos/Pijama_Preto_Comprido_G/2.jpg"
-    ],
-    "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Pijama Preto tamanho G."
-  },
-  {
-    "id": 11,
-    "nome": "Mini Baby Doll Rosa e Verde",
+    "nome": "Mini Baby Doll Rosa Verde",
     "categoria": "Mini Baby Doll",
     "preco": "R$ 14,90",
-    "descricao": "Mini baby doll rosa e verde, tamanho único.",
+    "precoAntigo": "R$ 29,90",
+    "parcelamento": "1x de R$ 14,90",
+    "descricao": "Mini baby doll com cor predominante rosa e detalhes em verde, delicado e com preço especial.",
     "imagem": "images/produtos/Mini_Baby_Doll_Rosa_Verde_Tamanho_Unico/1.jpg",
-    "imagens": [
+    "galeria": [
       "images/produtos/Mini_Baby_Doll_Rosa_Verde_Tamanho_Unico/1.jpg",
       "images/produtos/Mini_Baby_Doll_Rosa_Verde_Tamanho_Unico/2.jpg",
       "images/produtos/Mini_Baby_Doll_Rosa_Verde_Tamanho_Unico/3.jpg"
     ],
+    "cores": [
+      "Rosa com detalhes em verde"
+    ],
+    "tamanhos": [
+      "Unico"
+    ],
+    "avaliacao": 4.5,
+    "avaliacoes": 13,
+    "desconto": "-50%",
+    "destaque": true,
+    "novidade": false,
+    "promocao": true,
+    "composicao": "Malha leve com elastano.",
+    "whatsapp": "Olá, tenho interesse no Mini Baby Doll Rosa Verde, cor predominante rosa."
+  },
+  {
+    "id": 11,
+    "nome": "Baby Doll Verde Militar",
+    "categoria": "Baby Doll",
+    "preco": "R$ 49,00",
+    "precoAntigo": "R$ 65,00",
+    "parcelamento": "3x de R$ 16,33 sem juros",
+    "descricao": "Baby doll verde militar tamanho G, moderno e confortável.",
+    "imagem": "images/produtos/Baby_Doll_Verde_Militar_G/1.jpg",
+    "galeria": [
+      "images/produtos/Baby_Doll_Verde_Militar_G/1.jpg",
+      "images/produtos/Baby_Doll_Verde_Militar_G/2.jpg",
+      "images/produtos/Baby_Doll_Verde_Militar_G/3.jpg"
+    ],
+    "cores": [
+      "Verde militar"
+    ],
+    "tamanhos": [
+      "G"
+    ],
+    "avaliacao": 4.6,
+    "avaliacoes": 17,
+    "desconto": "-25%",
     "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Mini Baby Doll Rosa e Verde tamanho único."
+    "novidade": false,
+    "promocao": true,
+    "composicao": "Tecido leve com elastano.",
+    "whatsapp": "Olá, tenho interesse no Baby Doll Verde Militar."
   },
   {
     "id": 12,
+    "nome": "Baby Doll Canelado com Renda",
+    "categoria": "Baby Doll",
+    "preco": "R$ 39,00",
+    "precoAntigo": "R$ 59,90",
+    "parcelamento": "3x de R$ 13,00 sem juros",
+    "descricao": "Baby doll de malha canelada com detalhes em renda, tamanho G.",
+    "imagem": "images/produtos/Baby_Doll_Malha_Canelada_Com_ detalhes_ em_renda_G/1.jpg",
+    "galeria": [
+      "images/produtos/Baby_Doll_Malha_Canelada_Com_ detalhes_ em_renda_G/1.jpg",
+      "images/produtos/Baby_Doll_Malha_Canelada_Com_ detalhes_ em_renda_G/2.jpg"
+    ],
+    "cores": [
+      "Preto",
+      "Rosa"
+    ],
+    "tamanhos": [
+      "G"
+    ],
+    "avaliacao": 4.7,
+    "avaliacoes": 21,
+    "desconto": "-35%",
+    "destaque": true,
+    "novidade": true,
+    "promocao": true,
+    "composicao": "Malha canelada e renda delicada.",
+    "whatsapp": "Olá, tenho interesse no Baby Doll Canelado com Renda."
+  },
+  {
+    "id": 13,
+    "nome": "Camisola Vermelha Bruale",
+    "categoria": "Camisolas",
+    "preco": "R$ 39,00",
+    "precoAntigo": "R$ 59,90",
+    "parcelamento": "3x de R$ 13,00 sem juros",
+    "descricao": "Camisola vermelha tamanho M, delicada e marcante.",
+    "imagem": "images/produtos/Camisola_Vernelha_Bruale_M/1.jpg",
+    "galeria": [
+      "images/produtos/Camisola_Vernelha_Bruale_M/1.jpg"
+    ],
+    "cores": [
+      "Vermelho"
+    ],
+    "tamanhos": [
+      "M"
+    ],
+    "avaliacao": 4.5,
+    "avaliacoes": 12,
+    "desconto": "-35%",
+    "destaque": false,
+    "novidade": false,
+    "promocao": true,
+    "composicao": "Tecido leve com acabamento delicado.",
+    "whatsapp": "Olá, tenho interesse na Camisola Vermelha Bruale."
+  },
+  {
+    "id": 14,
     "nome": "Mini Baby Doll Laranja",
     "categoria": "Mini Baby Doll",
     "preco": "R$ 14,90",
-    "descricao": "Mini baby doll laranja, tamanho único.",
+    "precoAntigo": "R$ 29,90",
+    "parcelamento": "1x de R$ 14,90",
+    "descricao": "Mini baby doll laranja, tamanho único, leve e divertido.",
     "imagem": "images/produtos/Mini_Baby_Doll_Laranja_Tamanho_Unico/1.jpg",
-    "imagens": [
+    "galeria": [
       "images/produtos/Mini_Baby_Doll_Laranja_Tamanho_Unico/1.jpg",
       "images/produtos/Mini_Baby_Doll_Laranja_Tamanho_Unico/2.jpg",
       "images/produtos/Mini_Baby_Doll_Laranja_Tamanho_Unico/3.jpg"
     ],
+    "cores": [
+      "Laranja"
+    ],
+    "tamanhos": [
+      "Unico"
+    ],
+    "avaliacao": 4.4,
+    "avaliacoes": 10,
+    "desconto": "-50%",
     "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Mini Baby Doll Laranja tamanho único."
+    "novidade": false,
+    "promocao": true,
+    "composicao": "Malha leve com elastano.",
+    "whatsapp": "Olá, tenho interesse no Mini Baby Doll Laranja."
   },
   {
-    "id": 13,
+    "id": 15,
     "nome": "Mini Baby Doll Verde",
     "categoria": "Mini Baby Doll",
     "preco": "R$ 14,90",
-    "descricao": "Mini baby doll verde, tamanho único.",
+    "precoAntigo": "R$ 29,90",
+    "parcelamento": "1x de R$ 14,90",
+    "descricao": "Mini baby doll verde, tamanho único, com preço especial.",
     "imagem": "images/produtos/Mini_Baby_Doll_Verde_Tamanho_Unico/1.jpg",
-    "imagens": [
+    "galeria": [
       "images/produtos/Mini_Baby_Doll_Verde_Tamanho_Unico/1.jpg",
       "images/produtos/Mini_Baby_Doll_Verde_Tamanho_Unico/2.jpg",
       "images/produtos/Mini_Baby_Doll_Verde_Tamanho_Unico/3.jpg"
     ],
-    "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Mini Baby Doll Verde tamanho único."
-  },
-  {
-    "id": 14,
-    "nome": "Robe Vermelho",
-    "categoria": "Robes",
-    "preco": "R$ 60,00",
-    "descricao": "Robe vermelho com renda, disponível nos tamanhos M e GG.",
-    "imagem": "images/produtos/Robe_Vermelho_Com_Renda_M_GG/1.jpg",
-    "imagens": [
-      "images/produtos/Robe_Vermelho_Com_Renda_M_GG/1.jpg",
-      "images/produtos/Robe_Vermelho_Com_Renda_M_GG/2.jpg"
+    "cores": [
+      "Verde"
     ],
-    "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Robe Vermelho tamanhos M/GG."
-  },
-  {
-    "id": 15,
-    "nome": "Robe Marsala",
-    "categoria": "Robes",
-    "preco": "R$ 60,00",
-    "descricao": "Robe marsala com renda, disponível nos tamanhos M e GG.",
-    "imagem": "images/produtos/Robe_Marsala_Renda_M_GG/1.jpg",
-    "imagens": [
-      "images/produtos/Robe_Marsala_Renda_M_GG/1.jpg"
+    "tamanhos": [
+      "Unico"
     ],
+    "avaliacao": 4.4,
+    "avaliacoes": 9,
+    "desconto": "-50%",
     "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Robe Marsala tamanhos M/GG."
+    "novidade": false,
+    "promocao": true,
+    "composicao": "Malha leve com elastano.",
+    "whatsapp": "Olá, tenho interesse no Mini Baby Doll Verde."
   },
   {
     "id": 16,
-    "nome": "Robe Preto com Renda Vermelha",
-    "categoria": "Robes",
-    "preco": "R$ 60,00",
-    "descricao": "Robe preto com renda vermelha, disponível nos tamanhos P e M.",
-    "imagem": "images/produtos/Robe_Vermelho_Renda_Preto_P_M/1.jpg",
-    "imagens": [
-      "images/produtos/Robe_Vermelho_Renda_Preto_P_M/1.jpg",
-      "images/produtos/Robe_Vermelho_Renda_Preto_P_M/2.jpg"
-    ],
-    "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Robe Preto com Renda Vermelha tamanhos P/M."
-  },
-  {
-    "id": 17,
-    "nome": "Baby Doll de Malha Canelada com Detalhes em Renda",
-    "categoria": "Baby Doll",
-    "preco": "R$ 39,00",
-    "descricao": "Baby doll de malha canelada com detalhes em renda, tamanho G.",
-    "imagem": "images/produtos/Baby_Doll_Malha_Canelada_Com_ detalhes_ em_renda_G/1.jpg",
-    "imagens": [
-      "images/produtos/Baby_Doll_Malha_Canelada_Com_ detalhes_ em_renda_G/1.jpg",
-      "images/produtos/Baby_Doll_Malha_Canelada_Com_ detalhes_ em_renda_G/2.jpg"
-    ],
-    "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Baby Doll de Malha Canelada com Detalhes em Renda tamanho G."
-  },
-  {
-    "id": 18,
     "nome": "Pijama de Alça",
     "categoria": "Pijamas",
     "preco": "R$ 45,00",
+    "precoAntigo": "R$ 59,90",
+    "parcelamento": "3x de R$ 15,00 sem juros",
     "descricao": "Pijama de alça tamanho M, leve e confortável.",
     "imagem": "images/produtos/Pijama_Alça_M/1.png",
-    "imagens": [
+    "galeria": [
       "images/produtos/Pijama_Alça_M/1.png"
     ],
+    "cores": [
+      "Estampado"
+    ],
+    "tamanhos": [
+      "M"
+    ],
+    "avaliacao": 4.6,
+    "avaliacoes": 14,
+    "desconto": "-25%",
     "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Pijama de Alça tamanho M."
+    "novidade": true,
+    "promocao": true,
+    "composicao": "Malha leve e macia.",
+    "whatsapp": "Olá, tenho interesse no Pijama de Alça."
   },
   {
-    "id": 19,
+    "id": 17,
     "nome": "Pijama Americano Cinza com Calça",
     "categoria": "Pijamas",
     "preco": "R$ 60,00",
+    "precoAntigo": "R$ 79,90",
+    "parcelamento": "4x de R$ 15,00 sem juros",
     "descricao": "Pijama americano cinza com calça, tamanho G.",
     "imagem": "images/produtos/Pijama_Americano_Cinza_Com_Calça_G/1.png",
-    "imagens": [
+    "galeria": [
       "images/produtos/Pijama_Americano_Cinza_Com_Calça_G/1.png"
     ],
-    "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Pijama Americano Cinza com Calça tamanho G."
+    "cores": [
+      "Cinza"
+    ],
+    "tamanhos": [
+      "G"
+    ],
+    "avaliacao": 4.8,
+    "avaliacoes": 18,
+    "desconto": "-25%",
+    "destaque": true,
+    "novidade": false,
+    "promocao": true,
+    "composicao": "Malha fria com toque macio.",
+    "whatsapp": "Olá, tenho interesse no Pijama Americano Cinza com Calça."
   },
   {
-    "id": 20,
+    "id": 18,
     "nome": "Pijama Americano Cinza",
     "categoria": "Pijamas",
     "preco": "R$ 45,00",
-    "descricao": "Pijama americano cinza, disponível no tamanho G.",
+    "precoAntigo": "R$ 69,90",
+    "parcelamento": "3x de R$ 15,00 sem juros",
+    "descricao": "Pijama americano cinza disponível no tamanho G/GG.",
     "imagem": "images/produtos/Pijama_Americano_Cinza_G_GG/1.png",
-    "imagens": [
+    "galeria": [
       "images/produtos/Pijama_Americano_Cinza_G_GG/1.png"
     ],
+    "cores": [
+      "Cinza"
+    ],
+    "tamanhos": [
+      "G",
+      "GG"
+    ],
+    "avaliacao": 4.6,
+    "avaliacoes": 13,
+    "desconto": "-36%",
     "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Pijama Americano Cinza tamanhos G/GG."
+    "novidade": false,
+    "promocao": true,
+    "composicao": "Malha macia e respirável.",
+    "whatsapp": "Olá, tenho interesse no Pijama Americano Cinza."
   },
   {
-    "id": 21,
-    "nome": "Pijama Americano",
+    "id": 19,
+    "nome": "Pijama Americano Clássico",
     "categoria": "Pijamas",
     "preco": "R$ 60,00",
+    "precoAntigo": "R$ 79,90",
+    "parcelamento": "4x de R$ 15,00 sem juros",
     "descricao": "Pijama americano tamanho M, confortável e elegante.",
     "imagem": "images/produtos/Pijama_Americano_M/1.jpg",
-    "imagens": [
+    "galeria": [
       "images/produtos/Pijama_Americano_M/1.jpg"
     ],
+    "cores": [
+      "Estampado"
+    ],
+    "tamanhos": [
+      "M"
+    ],
+    "avaliacao": 4.7,
+    "avaliacoes": 16,
+    "desconto": "-25%",
     "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Pijama Americano tamanho M."
+    "novidade": false,
+    "promocao": true,
+    "composicao": "Malha leve com caimento confortável.",
+    "whatsapp": "Olá, tenho interesse no Pijama Americano Clássico."
   },
   {
-    "id": 22,
+    "id": 20,
     "nome": "Pijama Americano LV",
     "categoria": "Pijamas",
     "preco": "R$ 60,00",
+    "precoAntigo": "R$ 79,90",
+    "parcelamento": "4x de R$ 15,00 sem juros",
     "descricao": "Pijama americano LV tamanho M, moderno e confortável.",
     "imagem": "images/produtos/Pijama_Americano_VL_M/1.png",
-    "imagens": [
+    "galeria": [
       "images/produtos/Pijama_Americano_VL_M/1.png"
     ],
-    "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Pijama Americano LV tamanho M."
-  },
-  {
-    "id": 23,
-    "nome": "Pijama Americano Verde",
-    "categoria": "Pijamas",
-    "preco": "R$ 45,00",
-    "descricao": "Pijama americano verde tamanho M, leve e confortável.",
-    "imagem": "images/produtos/Pijama_Americano_Verde_M/1.png",
-    "imagens": [
-      "images/produtos/Pijama_Americano_Verde_M/1.png"
+    "cores": [
+      "Estampado"
     ],
+    "tamanhos": [
+      "M"
+    ],
+    "avaliacao": 4.6,
+    "avaliacoes": 11,
+    "desconto": "-25%",
     "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Pijama Americano Verde tamanho M."
+    "novidade": true,
+    "promocao": true,
+    "composicao": "Malha confortável.",
+    "whatsapp": "Olá, tenho interesse no Pijama Americano LV."
   },
   {
-    "id": 24,
+    "id": 21,
     "nome": "Pijama Branco com Bolso",
     "categoria": "Pijamas",
     "preco": "R$ 35,00",
-    "descricao": "Pijama branco com bolso, tamanho G.",
+    "precoAntigo": "R$ 49,90",
+    "parcelamento": "2x de R$ 17,50 sem juros",
+    "descricao": "Pijama branco com bolso, tamanho G, prático e confortável.",
     "imagem": "images/produtos/Pijama_Branco_Com_Bolso_G/1.png",
-    "imagens": [
+    "galeria": [
       "images/produtos/Pijama_Branco_Com_Bolso_G/1.png"
     ],
-    "videos": [
-      "images/produtos/Pijama_Branco_Com_Bolso_G/video.mp4"
+    "cores": [
+      "Branco"
     ],
+    "tamanhos": [
+      "G"
+    ],
+    "avaliacao": 4.5,
+    "avaliacoes": 12,
+    "desconto": "-30%",
     "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Pijama Branco com Bolso tamanho G."
+    "novidade": false,
+    "promocao": true,
+    "composicao": "Malha leve.",
+    "whatsapp": "Olá, tenho interesse no Pijama Branco com Bolso."
   },
   {
-    "id": 25,
+    "id": 22,
     "nome": "Pijama com Estampa",
     "categoria": "Pijamas",
     "preco": "R$ 35,00",
-    "descricao": "Pijama com estampa, tamanho G.",
+    "precoAntigo": "R$ 49,90",
+    "parcelamento": "2x de R$ 17,50 sem juros",
+    "descricao": "Pijama com estampa, tamanho G, leve para o dia a dia.",
     "imagem": "images/produtos/Pijama_Com_Estampa_G/1.png",
-    "imagens": [
+    "galeria": [
       "images/produtos/Pijama_Com_Estampa_G/1.png"
     ],
+    "cores": [
+      "Estampado"
+    ],
+    "tamanhos": [
+      "G"
+    ],
+    "avaliacao": 4.5,
+    "avaliacoes": 10,
+    "desconto": "-30%",
     "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Pijama com Estampa tamanho G."
+    "novidade": false,
+    "promocao": true,
+    "composicao": "Malha macia.",
+    "whatsapp": "Olá, tenho interesse no Pijama com Estampa."
   },
   {
-    "id": 26,
+    "id": 23,
     "nome": "Pijama Florido",
     "categoria": "Pijamas",
     "preco": "R$ 45,00",
+    "precoAntigo": "R$ 65,00",
+    "parcelamento": "3x de R$ 15,00 sem juros",
     "descricao": "Pijama florido tamanho G, leve e delicado.",
     "imagem": "images/produtos/Pijama_Florido_G/1.png",
-    "imagens": [
+    "galeria": [
       "images/produtos/Pijama_Florido_G/1.png"
     ],
+    "cores": [
+      "Florido"
+    ],
+    "tamanhos": [
+      "G"
+    ],
+    "avaliacao": 4.7,
+    "avaliacoes": 14,
+    "desconto": "-31%",
     "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Pijama Florido tamanho G."
+    "novidade": true,
+    "promocao": true,
+    "composicao": "Malha leve estampada.",
+    "whatsapp": "Olá, tenho interesse no Pijama Florido."
+  },
+  {
+    "id": 24,
+    "nome": "Pijama Gatinho",
+    "categoria": "Pijamas",
+    "preco": "R$ 34,90",
+    "precoAntigo": "R$ 49,90",
+    "parcelamento": "2x de R$ 17,45 sem juros",
+    "descricao": "Pijama gatinho disponível nos tamanhos P e M.",
+    "imagem": "images/produtos/Pijama_Gatinho_PeM/1.jpg",
+    "galeria": [
+      "images/produtos/Pijama_Gatinho_PeM/1.jpg",
+      "images/produtos/Pijama_Gatinho_PeM/2.jpg"
+    ],
+    "cores": [
+      "Estampado"
+    ],
+    "tamanhos": [
+      "P",
+      "M"
+    ],
+    "avaliacao": 4.8,
+    "avaliacoes": 20,
+    "desconto": "-30%",
+    "destaque": true,
+    "novidade": false,
+    "promocao": true,
+    "composicao": "Malha macia estampada.",
+    "whatsapp": "Olá, tenho interesse no Pijama Gatinho."
+  },
+  {
+    "id": 25,
+    "nome": "Camisola Estilo Camisetao",
+    "categoria": "Pijamas",
+    "preco": "R$ 35,00",
+    "precoAntigo": "R$ 49,90",
+    "parcelamento": "2x de R$ 17,50 sem juros",
+    "descricao": "Camisola estilo camisetão, tamanho M, confortável para dormir.",
+    "imagem": "images/produtos/Pijama_I_Love_Rosa_M/1.png",
+    "galeria": [
+      "images/produtos/Pijama_I_Love_Rosa_M/1.png"
+    ],
+    "cores": [
+      "Rosa"
+    ],
+    "tamanhos": [
+      "M"
+    ],
+    "avaliacao": 4.5,
+    "avaliacoes": 9,
+    "desconto": "-30%",
+    "destaque": false,
+    "novidade": false,
+    "promocao": true,
+    "composicao": "Malha leve.",
+    "whatsapp": "Olá, tenho interesse na Camisola Estilo Camisetao."
+  },
+  {
+    "id": 26,
+    "nome": "Pijama Longo Laranja",
+    "categoria": "Pijamas",
+    "preco": "R$ 60,00",
+    "precoAntigo": "R$ 79,90",
+    "parcelamento": "4x de R$ 15,00 sem juros",
+    "descricao": "Pijama longo laranja tamanho P, confortável para noites frescas.",
+    "imagem": "images/produtos/Pijama_Longo_Laranja_P/1.jpg",
+    "galeria": [
+      "images/produtos/Pijama_Longo_Laranja_P/1.jpg",
+      "images/produtos/Pijama_Longo_Laranja_P/2.jpg",
+      "images/produtos/Pijama_Longo_Laranja_P/3.jpg"
+    ],
+    "cores": [
+      "Laranja"
+    ],
+    "tamanhos": [
+      "P"
+    ],
+    "avaliacao": 4.7,
+    "avaliacoes": 15,
+    "desconto": "-25%",
+    "destaque": false,
+    "novidade": true,
+    "promocao": true,
+    "composicao": "Malha longa de toque macio.",
+    "whatsapp": "Olá, tenho interesse no Pijama Longo Laranja."
   },
   {
     "id": 27,
-    "nome": "Camisola Estilo Camisetão",
+    "nome": "Pijama Preto Comprido",
     "categoria": "Pijamas",
-    "preco": "R$ 35,00",
-    "descricao": "Camisola estilo camisetão, tamanho M.",
-    "imagem": "images/produtos/Pijama_I_Love_Rosa_M/1.png",
-    "imagens": [
-      "images/produtos/Pijama_I_Love_Rosa_M/1.png"
+    "preco": "R$ 60,00",
+    "precoAntigo": "R$ 79,90",
+    "parcelamento": "4x de R$ 15,00 sem juros",
+    "descricao": "Pijama preto comprido tamanho G, básico e aconchegante.",
+    "imagem": "images/produtos/Pijama_Preto_Comprido_G/1.jpg",
+    "galeria": [
+      "images/produtos/Pijama_Preto_Comprido_G/1.jpg",
+      "images/produtos/Pijama_Preto_Comprido_G/2.jpg"
     ],
-    "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse na Camisola Estilo Camisetão tamanho M."
+    "cores": [
+      "Preto"
+    ],
+    "tamanhos": [
+      "G"
+    ],
+    "avaliacao": 4.8,
+    "avaliacoes": 19,
+    "desconto": "-25%",
+    "destaque": true,
+    "novidade": false,
+    "promocao": true,
+    "composicao": "Malha comprida e confortável.",
+    "whatsapp": "Olá, tenho interesse no Pijama Preto Comprido."
   },
   {
     "id": 28,
     "nome": "Pijama Rosa com Bolso",
     "categoria": "Pijamas",
     "preco": "R$ 35,00",
-    "descricao": "Pijama rosa com bolso, tamanho G.",
+    "precoAntigo": "R$ 49,90",
+    "parcelamento": "2x de R$ 17,50 sem juros",
+    "descricao": "Pijama rosa com bolso, tamanho G, delicado e prático.",
     "imagem": "images/produtos/Pijama_Rosa_Com_Bolso_G/1.png",
-    "imagens": [
+    "galeria": [
       "images/produtos/Pijama_Rosa_Com_Bolso_G/1.png"
     ],
+    "cores": [
+      "Rosa"
+    ],
+    "tamanhos": [
+      "G"
+    ],
+    "avaliacao": 4.5,
+    "avaliacoes": 12,
+    "desconto": "-30%",
     "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Pijama Rosa com Bolso tamanho G."
+    "novidade": false,
+    "promocao": true,
+    "composicao": "Malha macia.",
+    "whatsapp": "Olá, tenho interesse no Pijama Rosa com Bolso."
   },
   {
     "id": 29,
     "nome": "Pijama Rosa",
     "categoria": "Pijamas",
     "preco": "R$ 39,00",
+    "precoAntigo": "R$ 59,90",
+    "parcelamento": "3x de R$ 13,00 sem juros",
     "descricao": "Pijama rosa tamanho G, confortável e delicado.",
     "imagem": "images/produtos/Pijama_Rosa_G/1.png",
-    "imagens": [
+    "galeria": [
       "images/produtos/Pijama_Rosa_G/1.png"
     ],
+    "cores": [
+      "Rosa"
+    ],
+    "tamanhos": [
+      "G"
+    ],
+    "avaliacao": 4.6,
+    "avaliacoes": 13,
+    "desconto": "-35%",
     "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Pijama Rosa tamanho G."
+    "novidade": false,
+    "promocao": true,
+    "composicao": "Malha leve.",
+    "whatsapp": "Olá, tenho interesse no Pijama Rosa."
   },
   {
     "id": 30,
     "nome": "Pijama Roxo Good Night",
     "categoria": "Pijamas",
     "preco": "R$ 60,00",
-    "descricao": "Pijama roxo Good Night, tamanho M.",
+    "precoAntigo": "R$ 79,90",
+    "parcelamento": "4x de R$ 15,00 sem juros",
+    "descricao": "Pijama roxo Good Night, tamanho M, moderno e confortável.",
     "imagem": "images/produtos/Pijama_Roxo_Good_Night_M/1.png",
-    "imagens": [
+    "galeria": [
       "images/produtos/Pijama_Roxo_Good_Night_M/1.png"
     ],
+    "cores": [
+      "Roxo"
+    ],
+    "tamanhos": [
+      "M"
+    ],
+    "avaliacao": 4.7,
+    "avaliacoes": 16,
+    "desconto": "-25%",
     "destaque": false,
-    "promocao": false,
-    "whatsapp": "Olá, tenho interesse no Pijama Roxo Good Night tamanho M."
+    "novidade": true,
+    "promocao": true,
+    "composicao": "Malha confortável.",
+    "whatsapp": "Olá, tenho interesse no Pijama Roxo Good Night."
+  },
+  {
+    "id": 31,
+    "nome": "Robe Vermelho com Renda",
+    "categoria": "Robes",
+    "preco": "R$ 60,00",
+    "precoAntigo": "R$ 89,90",
+    "parcelamento": "4x de R$ 15,00 sem juros",
+    "descricao": "Robe vermelho com renda, disponível nos tamanhos M e GG.",
+    "imagem": "images/produtos/Robe_Vermelho_Com_Renda_M_GG/1.jpg",
+    "galeria": [
+      "images/produtos/Robe_Vermelho_Com_Renda_M_GG/1.jpg",
+      "images/produtos/Robe_Vermelho_Com_Renda_M_GG/2.jpg"
+    ],
+    "cores": [
+      "Vermelho"
+    ],
+    "tamanhos": [
+      "M",
+      "GG"
+    ],
+    "avaliacao": 4.8,
+    "avaliacoes": 18,
+    "desconto": "-33%",
+    "destaque": true,
+    "novidade": false,
+    "promocao": true,
+    "composicao": "Tecido acetinado com renda.",
+    "whatsapp": "Olá, tenho interesse no Robe Vermelho com Renda."
+  },
+  {
+    "id": 32,
+    "nome": "Robe Preto com Renda Vermelha",
+    "categoria": "Robes",
+    "preco": "R$ 60,00",
+    "precoAntigo": "R$ 89,90",
+    "parcelamento": "4x de R$ 15,00 sem juros",
+    "descricao": "Robe preto com renda vermelha, disponível nos tamanhos P e M.",
+    "imagem": "images/produtos/Robe_Vermelho_Renda_Preto_P_M/1.jpg",
+    "galeria": [
+      "images/produtos/Robe_Vermelho_Renda_Preto_P_M/1.jpg",
+      "images/produtos/Robe_Vermelho_Renda_Preto_P_M/2.jpg"
+    ],
+    "cores": [
+      "Preto com renda vermelha"
+    ],
+    "tamanhos": [
+      "P",
+      "M"
+    ],
+    "avaliacao": 4.9,
+    "avaliacoes": 20,
+    "desconto": "-33%",
+    "destaque": true,
+    "novidade": false,
+    "promocao": true,
+    "composicao": "Tecido acetinado com renda aplicada.",
+    "whatsapp": "Olá, tenho interesse no Robe Preto com Renda Vermelha, cor predominante preta."
   }
 ]

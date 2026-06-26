@@ -1,33 +1,122 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Detalhes do produto no catálogo I-llopy."><meta name="theme-color" content="#d93379">
-  <meta property="og:title" content="Produto | I-llopy"><meta property="og:description" content="Veja os detalhes desta peça no catálogo I-llopy."><meta property="og:type" content="product"><meta property="og:image" content="images/logo_principal.jpg">
-  <title>Produto | Catálogo I-llopy</title><link rel="icon" href="images/logo_principal.jpg" type="image/jpeg"><link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produto | I-llopy Moda Intima</title>
+  <meta name="description" content="Detalhes do produto I-llopy com galeria, tamanhos, cores, beneficios e compra pelo WhatsApp.">
+  <meta name="theme-color" content="#0b0b0f">
+  <meta property="og:title" content="Produto I-llopy">
+  <meta property="og:description" content="Veja detalhes, fotos e compre pelo WhatsApp.">
+  <meta property="og:type" content="product">
+  <meta property="og:image" content="images/logo_principal.jpg">
+  <link rel="icon" href="images/logo_principal.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header class="site-header"><div class="container header-content"><a class="brand" href="index.html" aria-label="I-llopy — página inicial"><span class="logo-frame"><img src="images/logo_principal.jpg" alt="Logo da loja I-llopy" width="64" height="64" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="logo-fallback" hidden aria-hidden="true">I</span></span><span class="brand-name">I-llopy</span></a><a class="button button-outline button-small" href="index.html">Voltar ao catálogo</a></div></header>
-  <main class="product-page"><div class="container"><a class="back-link" href="index.html" aria-label="Voltar ao catálogo">← Voltar ao catálogo</a><div class="status-message" id="product-status" role="status"><span class="loader" aria-hidden="true"></span><p>Carregando produto...</p></div><article class="product-detail" id="product-detail" hidden></article></div></main>
-  <footer class="site-footer compact-footer">
+  <a class="skip-link" href="#produto">Ir para o produto</a>
+  <div class="top-strip" aria-label="Informações da loja">
+    <span>Consulte disponibilidade de cores e tamanhos pelo WhatsApp</span>
+    <span>Atendimento personalizado para finalizar seu pedido</span>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="I-llopy inicio">
+        <img src="images/logo_principal.jpg" alt="Logo I-llopy" width="74" height="74">
+        <span class="brand-copy"><strong>I-llopy</strong><small>Moda íntima boutique</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-menu" id="main-menu" aria-label="Menu principal">
+        <a href="index.html#inicio">Início</a>
+        <a href="index.html#catalogo">Catálogo</a>
+        <a href="index.html#promocoes">Promoções</a>
+        <a href="index.html#novidades">Novidades</a>
+        <a href="index.html#sobre">Sobre nós</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="header-commerce" aria-label="Acoes da loja">
+        <a class="header-search header-search-link" href="index.html#catalogo" aria-label="Buscar no catálogo"><span aria-hidden="true">⌕</span><span>Buscar no catálogo</span></a>
+        <button class="icon-button favorite-open" type="button" aria-label="Abrir favoritos">♡<span class="count-badge" data-favorites-count>0</span></button>
+        <a class="header-whatsapp js-whatsapp-general" href="#">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="product-page" id="produto">
+    <div class="container">
+      <nav class="breadcrumb" id="breadcrumb" aria-label="Caminho de navegação">
+        <a href="index.html">Início</a><span>›</span><span>Produto</span>
+      </nav>
+
+      <div class="status-message" id="product-status" role="status"><span class="loader" aria-hidden="true"></span><p>Carregando produto...</p></div>
+      <article class="product-detail" id="product-detail" hidden></article>
+
+      <section class="section related-section" aria-labelledby="related-title">
+        <div class="section-heading centered">
+          <p class="eyebrow">Selecionados para você</p>
+          <h2 id="related-title">Você também vai amar</h2>
+        </div>
+        <div class="product-grid compact" id="related-grid"></div>
+      </section>
+    </div>
+  </main>
+
+  <aside class="favorites-panel" id="favorites-panel" aria-hidden="true" aria-labelledby="favorites-title">
+    <div class="favorites-card">
+      <div class="favorites-head">
+        <div>
+          <p class="eyebrow">Lista de desejos</p>
+          <h2 id="favorites-title">Favoritos</h2>
+        </div>
+        <button class="panel-close" type="button" aria-label="Fechar favoritos">x</button>
+      </div>
+      <div class="favorites-list" id="favorites-list"></div>
+    </div>
+  </aside>
+
+  <button class="back-to-top" type="button" aria-label="Voltar ao topo">↑</button>
+
+  <footer class="site-footer" id="contato">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <span class="footer-logo"><img src="images/logo_principal.jpg" alt="Logo da loja I-llopy" width="64" height="64"></span>
-        <strong>I-llopy</strong>
-        <p>Moda íntima, pijamas e robes com conforto para o seu momento.</p>
+        <img src="images/logo_principal.jpg" alt="Logo I-llopy" width="86" height="86">
+        <p>Moda íntima premium com venda direta pelo WhatsApp, atendimento humano e peças selecionadas.</p>
       </div>
-      <nav class="footer-links" aria-label="Contato">
-        <a class="contact-link" href="https://www.instagram.com/i.llopy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da I-llopy">
-          <svg class="contact-icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
-          <span>Instagram</span>
-        </a>
-        <a class="contact-link js-general-whatsapp" href="#" aria-label="WhatsApp da I-llopy">
-          <svg class="contact-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M4.8 19.2 6 15.8A7.7 7.7 0 1 1 8.2 18l-3.4 1.2Z"></path><path d="M9.4 8.7c.2-.4.4-.5.7-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.5.6c.6 1.1 1.4 1.9 2.6 2.5l.6-.7c.2-.2.4-.2.6-.1l1.6.8c.3.1.4.3.4.6v.5c0 .3-.2.6-.5.7-.7.3-1.8.2-3.2-.4-1.6-.7-2.9-1.9-3.8-3.5-.7-1.3-1-2.5-.7-3.2Z"></path></svg>
-          <span>WhatsApp</span>
-        </a>
+      <nav aria-label="Links institucionais">
+        <h3>Institucional</h3>
+        <a href="index.html#sobre">Sobre nós</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Trocas e Devoluções</a>
+        <a href="#">Perguntas Frequentes</a>
       </nav>
-      <p class="footer-notice">Preços de liquidação. As cores, tamanhos e disponibilidade podem variar. Consulte pelo WhatsApp antes de finalizar seu pedido.</p>
+      <nav aria-label="Atendimento">
+        <h3>Atendimento</h3>
+        <a class="js-whatsapp-general" href="#">WhatsApp</a>
+        <a href="#">Envio e Prazos</a>
+        <a href="#">Formas de Pagamento</a>
+        <a href="#">Fale Conosco</a>
+      </nav>
+      <div>
+        <h3>Redes sociais</h3>
+        <div class="social-links">
+          <a href="https://www.instagram.com/i.llopy/" target="_blank" rel="noreferrer" aria-label="Instagram">◎</a>
+          <a class="js-whatsapp-general" href="#" aria-label="WhatsApp">☏</a>
+          <a href="#" aria-label="TikTok">♪</a>
+          <a href="#" aria-label="Facebook">f</a>
+        </div>
+      </div>
     </div>
+    <p class="copyright">© <span id="current-year"></span> I-llopy. Todos os direitos reservados.</p>
   </footer>
+
   <script src="assets/js/produto.js" defer></script>
 </body>
 </html>
+
+
