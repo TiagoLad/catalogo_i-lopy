@@ -875,3 +875,23 @@ body {
   border-color: var(--pink);
   background: rgba(233, 30, 99, .1);
 }
+/* Brand initial highlight */
+.brand-initial,
+.brand-copy strong .brand-initial {
+  color: var(--pink);
+}
+
+.footer-brand::before {
+  content: none;
+  display: none;
+}
+
+.footer-logo-text {
+  display: block;
+  margin-bottom: 14px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: .02em;
+}
+

@@ -81,12 +81,10 @@ function productSizesLabel(product) {
   return `${sizes.length > 1 ? "Tamanhos" : "Tamanho"}: ${sizes.join("/")}`;
 }
 function productCard(product) {
-  const discount = product.desconto ? `<span class="discount-badge">${escapeHtml(product.desconto)}</span>` : "";
   return `
     <article class="product-card">
       <div class="product-media">
         <a href="produto.html?id=${product.id}" aria-label="Ver detalhes de ${escapeHtml(product.nome)}"><img src="${escapeHtml(product.imagem)}" alt="${escapeHtml(product.nome)}" loading="lazy" onerror="this.onerror=null;this.src='images/logo_principal.jpg'"></a>
-        ${discount}
       </div>
       <div class="product-info">
         <h3>${escapeHtml(product.nome)}</h3>
@@ -118,7 +116,6 @@ function renderProduct(product) {
   const images = galleryItems(product);
   const favorites = getFavorites();
   const isFavorite = favorites.includes(product.id);
-  const discount = product.desconto ? `<span class="discount-badge">${escapeHtml(product.desconto)}</span>` : "";
 
   document.title = `${product.nome} | I-llopy`;
   document.querySelector("meta[name='description']")?.setAttribute("content", product.descricao);
@@ -135,7 +132,6 @@ function renderProduct(product) {
       </div>
       <div class="main-image-wrap">
         <img id="main-product-image" src="${escapeHtml(images[0])}" alt="${escapeHtml(product.nome)}" onerror="this.onerror=null;this.src='images/logo_principal.jpg'">
-        ${discount}
         <button class="favorite-btn ${isFavorite ? "active" : ""}" type="button" data-favorite="${product.id}" aria-label="${isFavorite ? "Remover" : "Adicionar"} aos favoritos">♡</button>
         <button class="zoom-pill" type="button" id="zoom-button">Ampliar imagem</button>
       </div>

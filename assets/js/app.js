@@ -13,7 +13,6 @@ const state = {
 const categoryImages = {
   Todos: "images/produtos/Baby_Doll-Branco_P/1.jpeg",
   "Baby Doll": "images/produtos/Baby_Doll_Marsala_M/1.jpg",
-  Conjuntos: "images/produtos/Baby_Doll_Preto_Vermelho_Renda_G/1.jpg",
   Pijamas: "images/produtos/Pijama_Americano_Verde_M/1.png",
   Camisolas: "images/produtos/Camisola_Vermelha_Renda_M_G/1.jpg",
   Robes: "images/produtos/Robe_Marsala_Renda_M_GG/1.jpg",
@@ -121,7 +120,6 @@ function productSizesLabel(product) {
 function productCard(product) {
   const favorites = getFavorites();
   const isFavorite = favorites.includes(product.id);
-  const discount = product.desconto ? `<span class="discount-badge">${escapeHtml(product.desconto)}</span>` : "";
 
   return `
     <article class="product-card">
@@ -129,7 +127,6 @@ function productCard(product) {
         <a href="produto.html?id=${product.id}" aria-label="Ver detalhes de ${escapeHtml(product.nome)}">
           <img src="${escapeHtml(product.imagem)}" alt="${escapeHtml(product.nome)}" loading="lazy" onerror="this.onerror=null;this.src='images/logo_principal.jpg';this.classList.add('image-fallback')">
         </a>
-        ${discount}
         <button class="favorite-btn ${isFavorite ? "active" : ""}" type="button" data-favorite="${product.id}" aria-label="${isFavorite ? "Remover" : "Adicionar"} ${escapeHtml(product.nome)} dos favoritos">♡</button>
       </div>
       <div class="product-info">
@@ -220,8 +217,8 @@ function closeFavoritesPanel() {
 }
 
 function renderCatégories() {
-  const requested = ["Todos", "Baby Doll", "Mini Baby Doll", "Camisolas", "Conjuntos", "Pijamas", "Robes"];
-  const hiddenCategories = ["Sutiãs", "Calcinhas", "Promoções"];
+  const requested = ["Todos", "Baby Doll", "Mini Baby Doll", "Camisolas", "Pijamas", "Robes"];
+  const hiddenCategories = ["Sutiãs", "Calcinhas", "Conjuntos", "Promoções"];
   const extra = [...new Set(state.products.map(product => product.categoria))].filter(category => !requested.includes(category) && !hiddenCategories.includes(category));
   const categories = [...requested, ...extra];
 
