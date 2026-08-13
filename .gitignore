@@ -1,2 +1,22 @@
+# Testes
 test-results/
+
+# Agentes
 .agents/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Variáveis de ambiente / segredos
+.env
+**/.env
+
+# IDE
+.vscode/
+.idea/
+
+# Arquivos temporários
+*.log
