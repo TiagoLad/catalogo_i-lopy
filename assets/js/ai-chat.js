@@ -1,4 +1,4 @@
-const ILOPY_AI_API = "http://127.0.0.1:8000";
+const ILOPY_AI_API = "https://163.176.9.61";
 
 document.addEventListener("DOMContentLoaded", () => {
     const chatButton = document.getElementById("ai-chat-button");
