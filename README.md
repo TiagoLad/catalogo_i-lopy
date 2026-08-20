@@ -1,150 +1,139 @@
 # 🛍️ I-LLOPY AI — Assistente Inteligente para E-commerce
 
-O **I-LLOPY AI** é um assistente virtual inteligente integrado ao catálogo online da I-LLOPY.
+O **I-LLOPY AI** é um assistente virtual integrado ao catálogo online da I-LLOPY. O projeto utiliza **Inteligência Artificial Generativa com arquitetura RAG (Retrieval-Augmented Generation)** para responder dúvidas dos clientes com base nos documentos oficiais da loja.
 
-O projeto utiliza **Inteligência Artificial Generativa com arquitetura RAG (Retrieval-Augmented Generation)** para responder perguntas dos clientes utilizando exclusivamente informações presentes na base de conhecimento da loja.
+O agente combina busca semântica, embeddings, índice vetorial FAISS e Google Gemini para recuperar trechos relevantes da base de conhecimento e gerar respostas contextualizadas, exibindo também as fontes utilizadas.
 
-O objetivo é oferecer ao usuário respostas rápidas sobre temas como:
+## 🌐 Projeto publicado
 
-- entregas;
-- devoluções;
-- reembolsos;
-- privacidade;
-- termos e condições;
-- funcionamento da loja;
-- dúvidas frequentes.
+- **Catálogo / Frontend:** https://tiagolad.github.io/catalogo_i-lopy/
+- **API / Health Check:** https://163.176.9.61/health
+- **Documentação FastAPI:** https://163.176.9.61/docs
+- **Repositório:** https://github.com/TiagoLad/catalogo_i-lopy
 
-Diferente de um chatbot baseado apenas em respostas pré-programadas, o I-LLOPY AI realiza uma busca semântica nos documentos da empresa e utiliza os trechos mais relevantes como contexto para gerar a resposta.
+> O frontend está publicado no GitHub Pages e o backend está implantado em uma VM Oracle Cloud Infrastructure (OCI), com Nginx como proxy reverso e comunicação via HTTPS.
 
 ---
 
-# 🎯 Objetivo do Projeto
+## 🎯 Objetivo do projeto
 
-O projeto foi desenvolvido com o objetivo de criar um agente de IA capaz de:
+O projeto foi desenvolvido para criar um agente de IA capaz de:
 
 - interpretar perguntas em linguagem natural;
-- consultar documentos da empresa;
-- localizar informações semanticamente relacionadas à pergunta;
-- fornecer contexto relevante ao modelo de linguagem;
+- consultar documentos da I-LLOPY;
+- localizar semanticamente os trechos mais relacionados à pergunta;
+- utilizar apenas o contexto recuperado para apoiar a resposta;
 - gerar respostas claras em português;
-- informar os documentos utilizados como fonte;
-- reduzir respostas inventadas ou sem respaldo documental;
-- integrar o agente diretamente à interface de um e-commerce.
+- informar quais documentos foram utilizados como fonte;
+- reduzir alucinações e respostas sem respaldo documental;
+- integrar a IA diretamente à experiência de um catálogo de e-commerce;
+- disponibilizar a solução em ambiente público de nuvem.
 
-O projeto demonstra na prática conceitos de:
-
-- Inteligência Artificial Generativa;
-- RAG;
-- embeddings;
-- busca vetorial;
-- processamento de documentos;
-- APIs REST;
-- integração entre frontend e backend.
+O projeto demonstra, na prática, conceitos de **IA Generativa, RAG, embeddings, busca vetorial, processamento de PDFs, APIs REST, integração frontend/backend e deploy em cloud**.
 
 ---
 
-# 🧠 Arquitetura da Solução
-
-A solução foi dividida em frontend, backend, mecanismo RAG e modelo de linguagem.
+## 🧠 Arquitetura da solução
 
 ```text
-┌───────────────────────────────┐
-│         Usuário               │
-│        I-LLOPY Store          │
-└───────────────┬───────────────┘
-                │
-                │ Pergunta
-                ▼
-┌───────────────────────────────┐
-│       Interface Web           │
-│   HTML + CSS + JavaScript     │
-│                               │
-│      Assistente I-LLOPY       │
-└───────────────┬───────────────┘
-                │
-                │ POST /chat
-                ▼
-┌───────────────────────────────┐
-│           FastAPI             │
-│                               │
-│          IlopyAgent           │
-└───────────────┬───────────────┘
-                │
-                │ Busca semântica
-                ▼
-┌───────────────────────────────┐
-│       Retriever / RAG         │
-│                               │
-│ Sentence Transformers         │
-│            +                  │
-│           FAISS               │
-└───────────────┬───────────────┘
-                │
-                │ Trechos relevantes
-                ▼
-┌───────────────────────────────┐
-│     Base de Conhecimento      │
-│                               │
-│          Arquivos PDF         │
-│                               │
-│ Privacidade                   │
-│ FAQ                           │
-│ Entregas                      │
-│ Reembolsos                    │
-│ Termos e Condições            │
-└───────────────────────────────┘
+┌──────────────────────────────┐
+│           Usuário            │
+│       Catálogo I-LLOPY       │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│        GitHub Pages          │
+│   HTML + CSS + JavaScript    │
+│       Chat I-LLOPY AI        │
+└──────────────┬───────────────┘
+               │ HTTPS / POST /chat
+               ▼
+┌──────────────────────────────┐
+│      Oracle Cloud (OCI)      │
+│                              │
+│          Nginx :443          │
+│      Reverse Proxy HTTPS     │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│       FastAPI / Uvicorn      │
+│          IlopyAgent          │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│         RAG Retriever        │
+│                              │
+│ Sentence Transformers        │
+│ all-MiniLM-L6-v2             │
+│            +                 │
+│           FAISS              │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│    Base de Conhecimento      │
+│          PDFs I-LLOPY        │
+└──────────────┬───────────────┘
+               │ contexto recuperado
+               ▼
+┌──────────────────────────────┐
+│        Google Gemini         │
+│     Geração da resposta      │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│      Resposta + Fontes       │
+│       exibidas no chat       │
+└──────────────────────────────┘
+```
 
-                │
-                │ Contexto recuperado
-                ▼
-┌───────────────────────────────┐
-│         Google Gemini         │
-│                               │
-│     Geração da resposta       │
-└───────────────┬───────────────┘
-                │
-                ▼
-┌───────────────────────────────┐
-│        Resposta + Fontes      │
-│                               │
-│       exibidas no chat        │
-└───────────────────────────────┘
+### Fluxo resumido
+
+```text
+Usuário
+  ↓
+GitHub Pages
+  ↓ HTTPS
+Nginx na OCI
+  ↓
+FastAPI
+  ↓
+Embedding da pergunta
+  ↓
+Busca vetorial no FAISS
+  ↓
+Top 3 trechos relevantes
+  ↓
+Contexto + pergunta
+  ↓
+Google Gemini
+  ↓
+Resposta + fontes
 ```
 
 ---
 
-# 🔎 Como funciona o RAG
-
-O mecanismo RAG utilizado pelo projeto funciona em diferentes etapas.
+## 🔎 Como funciona o RAG
 
 ### 1. Leitura dos documentos
 
-Os arquivos PDF presentes na base de conhecimento são processados utilizando `PyPDF`.
+Os PDFs da pasta `backend/knowledge/` são processados com **PyPDF**.
 
 ```text
-PDF
- ↓
-Extração do texto
+PDF → extração de texto
 ```
 
 ### 2. Divisão em chunks
 
-O conteúdo é dividido em pequenos trechos de texto.
+O conteúdo extraído é dividido em trechos menores com sobreposição, preservando melhor o contexto entre partes consecutivas dos documentos.
 
-```text
-Documento
- ↓
-Chunk 1
-Chunk 2
-Chunk 3
-...
-```
+### 3. Geração de embeddings
 
-Os chunks possuem sobreposição entre si para evitar perda de contexto entre partes do documento.
-
-### 3. Geração dos embeddings
-
-Cada trecho é convertido em um vetor numérico utilizando:
+Os chunks são convertidos em vetores usando o modelo:
 
 ```text
 sentence-transformers/all-MiniLM-L6-v2
@@ -152,56 +141,42 @@ sentence-transformers/all-MiniLM-L6-v2
 
 ### 4. Indexação vetorial
 
-Os embeddings são armazenados em um índice:
+Os vetores são armazenados em um índice **FAISS**. O projeto utiliza similaridade vetorial para encontrar os trechos mais relacionados à pergunta.
 
-```text
-FAISS
-```
+### 5. Recuperação
 
-O projeto utiliza busca por similaridade vetorial para encontrar os trechos mais relacionados à pergunta realizada pelo usuário.
-
-### 5. Recuperação de contexto
-
-Quando o usuário realiza uma pergunta:
+A pergunta do usuário também é transformada em embedding e comparada ao índice. Por padrão, o agente recupera os **3 trechos mais relevantes**.
 
 ```text
 Pergunta
    ↓
 Embedding
    ↓
-Busca FAISS
+FAISS
    ↓
-Top K documentos/chunks
+Top K chunks
 ```
-
-Por padrão, o agente recupera os **3 trechos mais relevantes**.
 
 ### 6. Geração da resposta
 
-Os trechos recuperados são enviados ao Gemini como contexto.
-
-O modelo é instruído a responder utilizando exclusivamente as informações encontradas na base de conhecimento.
+Os trechos recuperados são enviados ao Gemini como contexto. O agente recebe instruções para responder com base nas informações disponibilizadas pela base de conhecimento.
 
 ---
 
-# 💾 Persistência do índice FAISS
+## 💾 Persistência do índice FAISS
 
-Para evitar que todos os PDFs sejam processados e todos os embeddings sejam gerados novamente sempre que a API for iniciada, o índice vetorial é persistido.
-
-Os arquivos gerados são:
+O índice vetorial é persistido para evitar o reprocessamento completo dos PDFs em toda inicialização da API.
 
 ```text
 backend/data/vector_store/
-
 ├── index.faiss
 └── metadata.json
 ```
 
-O `index.faiss` contém o índice vetorial.
+- `index.faiss`: índice vetorial utilizado na busca semântica;
+- `metadata.json`: chunks e metadados relacionados aos vetores.
 
-O `metadata.json` armazena os textos e documentos relacionados aos vetores.
-
-Assim, durante a inicialização da aplicação:
+Na inicialização:
 
 ```text
 FastAPI
@@ -210,53 +185,56 @@ Carrega index.faiss
    ↓
 Carrega metadata.json
    ↓
+Inicializa o modelo de embeddings
+   ↓
 Agente pronto
 ```
 
-Isso reduz o tempo de inicialização da aplicação.
-
 ---
 
-# 📚 Base de Conhecimento
+## 📚 Base de conhecimento
 
-Atualmente o agente utiliza documentos relacionados às principais regras e informações da loja.
+Atualmente o agente utiliza os seguintes documentos:
 
 ```text
 backend/knowledge/
-
-├── politica_privacidade_ilopy.pdf
-├── politica_reembolso_devolucoes_ilopy.pdf
-├── faq_ilopy.pdf
 ├── envios_entregas_ilopy.pdf
-└── termos_condicoes_ilopy.pdf
+├── faq_ilopy.pdf
+├── politica_privacidade_ilopy.pdf
+├── termos_condicoes_ilopy.pdf
+└── trocas_devolucoes_ilopy.pdf
 ```
 
-Esses documentos são utilizados como fonte pelo mecanismo RAG.
+A base cobre temas como entregas, dúvidas frequentes, privacidade, termos de uso, trocas e devoluções.
 
 ---
 
-# 🛡️ Controle de Alucinação
+## 🛡️ Controle de alucinação
 
-O agente possui instruções específicas para reduzir respostas inventadas.
+O agente foi projetado para reduzir respostas inventadas. Entre as regras utilizadas estão:
 
-Entre as regras utilizadas estão:
-
-- responder utilizando somente o contexto recuperado;
+- responder com base no contexto recuperado;
 - não inventar preços;
 - não inventar estoque;
-- não inventar tamanhos ou cores disponíveis;
+- não inventar tamanhos ou cores;
 - não criar prazos de entrega inexistentes;
 - não criar políticas da empresa;
-- não confirmar informações que não estejam presentes nos documentos;
-- informar ao cliente quando a informação não estiver disponível na base.
-
-Caso o agente não encontre informação suficiente, ele é orientado a recomendar o contato com o atendimento da I-LLOPY.
+- não confirmar informações ausentes na base;
+- orientar o usuário quando não houver informação suficiente nos documentos.
 
 ---
 
-# 🛠️ Tecnologias e Ferramentas
+## 🛠️ Tecnologias utilizadas
 
-## Backend
+### Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+- Fetch API
+- GitHub Pages
+
+### Backend
 
 - Python 3.12
 - FastAPI
@@ -264,77 +242,74 @@ Caso o agente não encontre informação suficiente, ele é orientado a recomend
 - Pydantic
 - python-dotenv
 
-## Inteligência Artificial
+### Inteligência Artificial
 
 - Google Gemini API
 - Google GenAI SDK
 
-## RAG e Busca Vetorial
+### RAG e busca vetorial
 
 - Sentence Transformers
 - `all-MiniLM-L6-v2`
 - FAISS
 - NumPy
 
-## Processamento de documentos
+### Processamento de documentos
 
 - PyPDF
 
-## Frontend
+### Cloud e infraestrutura
 
-- HTML5
-- CSS3
-- JavaScript
-- Fetch API
+- Oracle Cloud Infrastructure (OCI)
+- Ubuntu Linux
+- Nginx
+- systemd
+- HTTPS / TLS
+- iptables
 
-## Versionamento
+### Versionamento
 
 - Git
 - GitHub
 
-## Hospedagem do frontend
-
-- GitHub Pages
-
 ---
 
-# 📁 Estrutura do Projeto
+## 📁 Estrutura do projeto
 
 ```text
-Catalogo_I-llopy/
+catalogo_i-lopy/
 │
 ├── assets/
 │   ├── css/
 │   │   ├── style.css
 │   │   └── ai-chat.css
-│   │
 │   └── js/
 │       ├── app.js
+│       ├── produto.js
 │       └── ai-chat.js
 │
 ├── backend/
-│   │
 │   ├── app/
 │   │   ├── main.py
-│   │   │
 │   │   ├── agent/
+│   │   │   ├── __init__.py
 │   │   │   └── agent.py
-│   │   │
 │   │   ├── llm/
+│   │   │   ├── __init__.py
 │   │   │   └── client.py
-│   │   │
 │   │   └── rag/
+│   │       ├── __init__.py
 │   │       ├── loader.py
 │   │       ├── chunker.py
 │   │       ├── embeddings.py
 │   │       └── retriever.py
 │   │
 │   ├── knowledge/
-│   │   ├── politica_privacidade_ilopy.pdf
-│   │   ├── politica_reembolso_devolucoes_ilopy.pdf
-│   │   ├── faq_ilopy.pdf
 │   │   ├── envios_entregas_ilopy.pdf
-│   │   └── termos_condicoes_ilopy.pdf
+│   │   ├── faq_ilopy.pdf
+│   │   ├── politica_privacidade_ilopy.pdf
+│   │   ├── termos_condicoes_ilopy.pdf
+│   │   └── trocas_devolucoes_ilopy.pdf
 │   │
 │   ├── data/
 │   │   └── vector_store/
@@ -343,14 +318,11 @@ Catalogo_I-llopy/
 │   │
 │   ├── scripts/
 │   │   └── build_index.py
-│   │
 │   ├── tests/
-│   │
 │   ├── requirements.txt
 │   └── .env.example
 │
 ├── images/
-│
 ├── index.html
 ├── produto.html
 ├── .gitignore
@@ -359,102 +331,87 @@ Catalogo_I-llopy/
 
 ---
 
-# 🚀 Como executar o projeto
+## 🚀 Executando localmente
 
-## 1. Clonar o repositório
-
-```bash
-git clone URL_DO_REPOSITORIO
-```
-
-Entre na pasta:
+### 1. Clonar o repositório
 
 ```bash
-cd Catalogo_I-llopy
+git clone https://github.com/TiagoLad/catalogo_i-lopy.git
+cd catalogo_i-lopy/backend
 ```
 
----
+### 2. Criar o ambiente virtual
 
-## 2. Criar ambiente virtual
-
-No Windows:
+#### Windows PowerShell
 
 ```powershell
 python -m venv .venv
-```
-
-Ative o ambiente:
-
-```powershell
 .\.venv\Scripts\Activate.ps1
 ```
 
-No Linux:
+#### Linux
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
----
-
-## 3. Instalar as dependências
-
-Entre no backend:
-
-```bash
-cd backend
-```
-
-Instale:
+### 3. Instalar as dependências
 
 ```bash
 pip install -r requirements.txt
 ```
 
+As principais dependências do backend são:
+
+```text
+fastapi
+uvicorn
+python-dotenv
+pydantic
+pypdf
+google-genai
+numpy
+faiss-cpu
+sentence-transformers
+```
+
 ---
 
-# 🔑 Configuração do Gemini
+## 🔑 Configuração do Gemini
 
-Crie um arquivo:
+Crie o arquivo:
 
 ```text
 backend/.env
 ```
 
-Utilize o `.env.example` como referência.
-
-Exemplo:
+Use o `.env.example` como referência:
 
 ```env
 GEMINI_API_KEY=sua_chave_gemini
 GEMINI_MODEL=gemini-3.6-flash
 ```
 
-> A chave da API nunca deve ser enviada para o GitHub.
-
-O arquivo `.env` está incluído no `.gitignore`.
-
-O modelo configurado pode ser alterado de acordo com os modelos disponíveis na conta utilizada.
+> Nunca envie sua chave da API para o GitHub. O arquivo `.env` é ignorado pelo Git.
 
 ---
 
-# 🧠 Gerando o índice vetorial
+## 🧠 Gerando o índice vetorial
 
-Caso os documentos da pasta `knowledge` sejam modificados, o índice FAISS deve ser recriado.
-
-Execute, dentro de `backend`:
+Se os PDFs da base de conhecimento forem adicionados ou modificados, recrie o índice:
 
 ```bash
+cd backend
 python -m scripts.build_index
 ```
 
-O processo executará:
+Fluxo:
 
 ```text
 PDFs
  ↓
-Extração
+Extração de texto
  ↓
 Chunks
  ↓
@@ -462,56 +419,34 @@ Embeddings
  ↓
 FAISS
  ↓
-index.faiss
-+
-metadata.json
+index.faiss + metadata.json
 ```
-
-Depois disso, reinicie a API.
 
 ---
 
-# ▶️ Iniciando a API
+## ▶️ Iniciando a API
 
-Dentro da pasta:
-
-```text
-backend/
-```
-
-execute:
+Dentro de `backend/`:
 
 ```bash
-uvicorn app.main:app --reload
+python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
 ```
 
-A API ficará disponível em:
+Endpoints locais:
 
 ```text
-http://127.0.0.1:8000
+API:        http://127.0.0.1:8000
+Health:     http://127.0.0.1:8000/health
+Swagger UI: http://127.0.0.1:8000/docs
 ```
 
-Documentação automática:
-
-```text
-http://127.0.0.1:8000/docs
-```
-
-Health Check:
-
-```text
-http://127.0.0.1:8000/health
-```
+> Na primeira inicialização, o modelo de embeddings pode precisar ser baixado do Hugging Face e o carregamento pode levar mais tempo.
 
 ---
 
-# 💬 Endpoint do Agente
+## 💬 Endpoint do agente
 
-O endpoint principal é:
-
-```http
-POST /chat
-```
+### `POST /chat`
 
 Exemplo de requisição:
 
@@ -521,24 +456,32 @@ Exemplo de requisição:
 }
 ```
 
-Exemplo de retorno:
+Exemplo de resposta:
 
 ```json
 {
-  "answer": "O prazo de entrega pode variar de acordo com a localização, disponibilidade do produto, modalidade de envio e transportadora.",
+  "answer": "Resposta gerada com base nos documentos da I-LLOPY.",
   "sources": [
     "envios_entregas_ilopy.pdf"
   ]
 }
 ```
 
+### `GET /health`
+
+Resposta esperada:
+
+```json
+{
+  "status": "online"
+}
+```
+
 ---
 
-# 🌐 Executando o Frontend
+## 🌐 Executando o frontend localmente
 
-Abra outro terminal na raiz do projeto.
-
-Execute:
+Com a API em execução, abra outro terminal na raiz do projeto:
 
 ```bash
 python -m http.server 5500
@@ -550,348 +493,128 @@ Acesse:
 http://127.0.0.1:5500
 ```
 
-O frontend enviará as perguntas para a API FastAPI através do endpoint:
-
-```text
-POST /chat
-```
+Para desenvolvimento local, configure `ILOPY_AI_API` em `assets/js/ai-chat.js` para apontar para a API local. No ambiente publicado, o frontend utiliza a API HTTPS hospedada na OCI.
 
 ---
 
-# 💬 Exemplos de perguntas
+## ☁️ Deploy em Oracle Cloud Infrastructure
 
-O assistente consegue responder perguntas como:
+O backend está publicado em uma VM Linux na **Oracle Cloud Infrastructure**.
 
-### Entregas
+### Arquitetura de produção
+
+```text
+Internet
+   ↓
+HTTPS :443
+   ↓
+Nginx
+   ↓
+127.0.0.1:8000
+   ↓
+FastAPI / Uvicorn
+   ↓
+RAG + FAISS + Gemini
+```
+
+O serviço FastAPI é mantido em execução pelo `systemd`, enquanto o Nginx atua como proxy reverso HTTPS.
+
+Exemplo de gerenciamento do serviço:
+
+```bash
+sudo systemctl status ilopy-api
+sudo systemctl restart ilopy-api
+sudo journalctl -u ilopy-api -n 50 --no-pager
+```
+
+O backend não precisa expor diretamente a porta `8000` para a internet; as requisições externas passam pelo Nginx.
+
+---
+
+## 🔐 Segurança
+
+Algumas práticas adotadas no projeto:
+
+- chave Gemini armazenada em `.env` e fora do Git;
+- `.env` incluído no `.gitignore`;
+- comunicação pública via HTTPS;
+- Nginx como proxy reverso;
+- FastAPI executando atrás do proxy;
+- CORS restrito às origens utilizadas pelo projeto;
+- porta da aplicação não utilizada diretamente pelo frontend público.
+
+---
+
+## 💬 Exemplos de perguntas
 
 ```text
 Como funciona o prazo de entrega?
-```
-
-```text
 Como acompanho meu pedido?
-```
-
-```text
 Como funciona o envio dos produtos?
-```
-
-### Devoluções e reembolsos
-
-```text
 Como faço para devolver um produto?
-```
-
-```text
 Como funciona o reembolso?
-```
-
-```text
-Posso desistir de uma compra realizada online?
-```
-
-### Privacidade
-
-```text
 Quais dados pessoais a I-LLOPY coleta?
-```
-
-```text
 Para que meus dados são utilizados?
-```
-
-### Produtos
-
-```text
-A disponibilidade dos produtos é garantida pelo catálogo?
-```
-
-```text
-Como faço para comprar uma peça?
-```
-
-### Atendimento
-
-```text
 Como entro em contato com a I-LLOPY?
-```
-
-### Termos
-
-```text
 Quais são as condições de uso da loja?
 ```
 
 ---
 
-# 🤖 Exemplos de respostas do agente
+## 🧪 Testando a API
 
-## Pergunta
-
-```text
-Como funciona o prazo de entrega?
-```
-
-### Exemplo de resposta
-
-> O prazo de entrega pode variar de acordo com o endereço informado, a modalidade de envio, a disponibilidade do produto, o processamento do pedido e a transportadora responsável. As condições de entrega são informadas durante o processo de compra.
-
-**Fonte utilizada:**
-
-```text
-Envios e Entregas
-```
-
----
-
-## Pergunta
-
-```text
-Como faço para devolver um produto?
-```
-
-### Exemplo de resposta
-
-> Para solicitar uma devolução, entre em contato com o atendimento da I-LLOPY. Nas compras realizadas online, o consumidor pode solicitar a devolução dentro do prazo previsto para o direito de arrependimento, seguindo as condições descritas na política de devoluções.
-
-**Fonte utilizada:**
-
-```text
-Política de Reembolso e Devoluções
-```
-
----
-
-## Pergunta
-
-```text
-Quais dados pessoais a I-LLOPY coleta?
-```
-
-### Exemplo de resposta
-
-> A I-LLOPY pode utilizar dados necessários para atendimento e processamento das solicitações dos clientes, como nome, telefone, endereço e informações relacionadas ao pedido, conforme descrito em sua Política de Privacidade.
-
-**Fonte utilizada:**
-
-```text
-Política de Privacidade
-```
-
----
-
-## Pergunta
-
-```text
-A disponibilidade do produto é garantida pelo catálogo?
-```
-
-### Exemplo de resposta
-
-> Não. A exibição de um produto no catálogo não representa garantia automática de disponibilidade. A confirmação deve ser realizada de acordo com as informações e canais disponibilizados pela I-LLOPY.
-
-**Fonte utilizada:**
-
-```text
-Termos e Condições
-```
-
----
-
-# ⚠️ Perguntas sem informação na base
-
-O agente foi configurado para não inventar informações.
-
-Por exemplo:
-
-```text
-Vocês possuem essa camiseta na cor azul tamanho M?
-```
-
-Caso essa informação não esteja presente nos documentos, o agente deve informar que não conseguiu confirmá-la na base de conhecimento e orientar o usuário a entrar em contato com o atendimento.
-
-Esse comportamento reduz o risco de respostas incorretas sobre:
-
-```text
-estoque
-preços
-cores
-tamanhos
-prazos
-descontos
-formas de pagamento
-```
-
----
-
-# 🔄 Fluxo completo da aplicação
-
-```text
-Usuário
-  ↓
-Pergunta no chat
-  ↓
-JavaScript
-  ↓
-POST /chat
-  ↓
-FastAPI
-  ↓
-IlopyAgent
-  ↓
-Embedding da pergunta
-  ↓
-FAISS
-  ↓
-Busca semântica
-  ↓
-3 chunks mais relevantes
-  ↓
-Contexto
-  ↓
-Google Gemini
-  ↓
-Resposta
-  ↓
-FastAPI
-  ↓
-Frontend
-  ↓
-Resposta + fontes
-```
-
----
-
-# ✅ Funcionalidades implementadas
-
-- [x] Catálogo web responsivo
-- [x] Assistente IA integrado ao frontend
-- [x] API REST utilizando FastAPI
-- [x] Leitura de documentos PDF
-- [x] Divisão de documentos em chunks
-- [x] Geração de embeddings
-- [x] Busca semântica
-- [x] Banco vetorial FAISS
-- [x] Persistência do índice FAISS
-- [x] Integração com Google Gemini
-- [x] Recuperação de múltiplas fontes
-- [x] Exibição das fontes utilizadas
-- [x] Controle de respostas fora da base
-- [x] Interface responsiva do chat
-- [x] Indicador de geração de resposta
-- [x] Sugestões de perguntas
-- [x] Health Check da API
-- [ ] Deploy público do backend
-- [ ] Integração final com ambiente de produção
-
----
-
-# 🧪 Testes
-
-O projeto possui testes para os principais componentes do pipeline RAG.
-
-Entre eles:
-
-```text
-Loader
-Chunker
-Embeddings
-Retriever
-Recuperação de fontes
-```
-
-Exemplo:
+Health check:
 
 ```bash
-python -m tests.test_rag_sources
+curl https://163.176.9.61/health
 ```
 
-Esse teste permite verificar quais documentos e trechos estão sendo recuperados para diferentes perguntas.
+Exemplo de chamada ao agente:
 
----
-
-# 🌎 Frontend
-
-O catálogo da I-LLOPY pode ser publicado utilizando **GitHub Pages**.
-
-O frontend se comunica de forma independente com o backend através da API REST, permitindo que as duas partes da aplicação sejam hospedadas separadamente.
-
-Arquitetura de produção:
-
-```text
-GitHub Pages
-     │
-     │ HTTPS
-     ▼
-Backend em Cloud
-     │
-     ▼
-FastAPI
-     │
-     ├── FAISS
-     └── Gemini
+```bash
+curl -X POST https://163.176.9.61/chat \
+  -H "Content-Type: application/json" \
+  -d '{"question":"Como funciona o prazo de entrega?"}'
 ```
 
 ---
 
-# 🔐 Segurança
+## ✅ Status do projeto
 
-Informações sensíveis não são armazenadas diretamente no código-fonte.
-
-A chave da API Gemini é definida utilizando variável de ambiente:
-
-```env
-GEMINI_API_KEY
-```
-
-Arquivos `.env` são ignorados pelo Git através do `.gitignore`.
-
----
-
-# 📈 Evolução do Projeto
-
-O desenvolvimento foi realizado de forma incremental:
-
-```text
-Fase 1
-Estrutura inicial + FastAPI
-
-        ↓
-
-Fase 2
-Pipeline RAG
-
-        ↓
-
-Fase 3
-Embeddings + FAISS + Gemini
-
-        ↓
-
-Fase 4
-Integração do assistente ao catálogo
-
-        ↓
-
-Otimização
-Persistência do índice FAISS
-
-        ↓
-
-Deploy
-Ambiente em nuvem
-```
-
-O histórico de commits do repositório demonstra essa evolução.
+- [x] Catálogo web responsivo
+- [x] Interface de chat integrada ao frontend
+- [x] API FastAPI
+- [x] Processamento de documentos PDF
+- [x] Chunking de conteúdo
+- [x] Embeddings com Sentence Transformers
+- [x] Busca vetorial com FAISS
+- [x] Persistência do índice vetorial
+- [x] Integração com Google Gemini
+- [x] Respostas com indicação de fontes
+- [x] CORS para integração com GitHub Pages
+- [x] Frontend publicado no GitHub Pages
+- [x] Backend publicado na Oracle Cloud Infrastructure
+- [x] Nginx como proxy reverso
+- [x] HTTPS na API pública
+- [x] Serviço FastAPI gerenciado pelo systemd
 
 ---
 
-# 👨‍💻 Autor
+## 📌 Possíveis evoluções
 
-Projeto desenvolvido por **Tiago** como projeto prático de Inteligência Artificial Generativa, RAG, APIs e integração de aplicações web.
+- tratamento amigável para limites temporários da API Gemini;
+- cache de respostas para perguntas recorrentes;
+- painel administrativo para gerenciar documentos;
+- atualização automática do índice ao adicionar documentos;
+- métricas de uso e observabilidade;
+- autenticação para endpoints administrativos;
+- testes automatizados adicionais;
+- domínio próprio para a API.
 
 ---
 
-# 📄 Licença
+## 👨‍💻 Autor
 
-Projeto desenvolvido para fins educacionais e de demonstração.
+Projeto desenvolvido por **Tiago Ladeira Mantovani** como aplicação prática de Inteligência Artificial Generativa, RAG, APIs e cloud computing.
+
+GitHub: https://github.com/TiagoLad
